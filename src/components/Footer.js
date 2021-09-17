@@ -8,7 +8,7 @@ import TwitterLogo from "../images/logo_twitter.png"
 import FooterBackground from "../images/background_footer.jpg"
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
-  root: {
+  footerRoot: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -57,7 +57,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.footerRoot}>
       <div>
 
         <h5 className={classes.title}>
