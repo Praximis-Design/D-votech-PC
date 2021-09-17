@@ -6,18 +6,8 @@ import { Hidden } from "@material-ui/core";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { getThemeProps } from "@material-ui/styles";
 
-const useStyles = makeStyles(({ spacing, breakpoints }) => ({
-
-  titleContainer: {
-    position: "relative",
-    height: "100%",
-    marginTop: "5em"
-  }
-}));
-
 const Header = ({ title, backgroundImageUrl, handleChange }) => {
 
-  const classes = useStyles({ backgroundImageUrl });
   return (
     <div id="header">
       <Hidden smDown>
