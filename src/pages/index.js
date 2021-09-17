@@ -14,9 +14,8 @@ import {
 } from "@material-ui/core";
 import Section from "../components/Section";
 import "../app.css";
-import { formatMessage } from "@formatjs/intl";
-import HeaderBackground from "../images/background_header_homepage.jpg"
-import HomepageMission from "../images/homepage_mission.jpg"
+import HeaderBackground from "../images/background_header_homepage.jpg";
+import HomepageMission from "../images/homepage_mission.jpg";
 
 const IndexPage = ({ location }) => {
 
