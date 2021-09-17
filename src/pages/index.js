@@ -34,10 +34,10 @@ const IndexPage = ({ location }) => {
 
   return (
     <>
-      {/*<StaticIntlProvider locale={locale} >
+      <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="homepage.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={HeaderBackground}>*/}
+          backgroundImageUrl={HeaderBackground}>
           <Section>
             <Container maxWidth="lg">
               <Grid item xs={12}>
@@ -47,8 +47,8 @@ const IndexPage = ({ location }) => {
               </Grid>
             </Container>
           </Section>
-        {/*</DefaultLayout>
-      </StaticIntlProvider>*/}
+        </DefaultLayout>
+      </StaticIntlProvider>
     </>
   )
 }
