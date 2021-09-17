@@ -7,39 +7,7 @@ import InstagramLogo from "../images/logo_instagram.png"
 import TwitterLogo from "../images/logo_twitter.png"
 import FooterBackground from "../images/background_footer.jpg"
 
-const footerStyle = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "100vh",
-  backgroundImage: "url(" + FooterBackground + ")",
-  backgroundSize: "cover",
-  backgroundPosition: "center",  
-  backgroundAttachment: "fixed"
-}
-
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
-  footerRoot: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100vh",
-    //backgroundImage: "url(" + FooterBackground + ")",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    [breakpoints.up("lg")]: {
-      backgroundAttachment: "fixed"
-    },
-    [breakpoints.down("md")]: {
-      height: "60vh"
-    },
-    [breakpoints.down("xs")]: {
-      paddingLeft: spacing(2),
-      paddingRight: spacing(2)
-    }
-  },
   logo: {
     maxWidth: "2rem"
   },
@@ -69,7 +37,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <div className={classes.footerRoot} style={footerStyle}>
+    <div id="footer">
       <div>
 
         <h5 className={classes.title}>

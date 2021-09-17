@@ -116,4 +116,12 @@ th:not([align]) {
 
 #footer {
   background-image: url(../src/images/background_footer.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;  
+  background-attachment: fixed;
 }
