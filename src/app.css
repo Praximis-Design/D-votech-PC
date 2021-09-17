@@ -125,3 +125,33 @@ th:not([align]) {
   background-position: center;  
   background-attachment: fixed;
 }
+
+.footerTitle {
+  color: white;
+  margin-top: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  font-family: Heebo, sans-serif;
+}
+
+.footerLogosContainer {
+  display: flex;
+}
+
+.footerLogoContainer {
+  padding: 5em;
+}
+
+.footerLogoLink {
+  display: block;
+  transform: "scale(1)";
+  transition: "transform 500ms";  
+}
+
+.footerLogoLink:hover {
+    transform: scale(1.25)
+}
+
+.footerLogo {
+  max-width: 2em;
+}

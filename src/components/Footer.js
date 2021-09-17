@@ -7,69 +7,44 @@ import InstagramLogo from "../images/logo_instagram.png"
 import TwitterLogo from "../images/logo_twitter.png"
 import FooterBackground from "../images/background_footer.jpg"
 
-const useStyles = makeStyles(({ breakpoints, spacing }) => ({
-  logo: {
-    maxWidth: "2rem"
-  },
-  title: {
-    color: "white",
-    marginTop: "1.5rem",
-    fontSize: "1.75rem",
-    fontWeight: "bold",
-    fontFamily: "Heebo, sans-serif"
-  },
-  logosContainer: {
-    display: "flex"
-  },
-  logoContainer: {
-    padding: "5em"
-  },
-  logoLink: {
-    display: "block",
-    transform: "scale(1)",
-    transition: "transform 500ms",
-    "&:hover": {
-      transform: "scale(1.25)"
-    }
-  }
-}));
+
 
 const Footer = () => {
-  const classes = useStyles();
+  
   return (
     <div id="footer">
       <div>
 
-        <h5 className={classes.title}>
+        <h5 className={"footerTitle"}>
           <FormattedMessage id="footer.title" />
         </h5>
       </div>
-      <div className={classes.logosContainer}>
-        <div className={classes.logoContainer}>
+      <div className={"footerLogosContainer"}>
+        <div className={"footerLogoContainer"}>
           <a
-            className={classes.logoLink}
+            className={"footerLogoLink"}
             href="https://www.facebook.com/praximisdesign"
             target="_blank"
           >
-            <img className={classes.logo} src={FacebookLogo} />
+            <img className={"footerLogo"} src={FacebookLogo} />
           </a>
         </div>
-        <div className={classes.logoContainer}>
+        <div className={"footerLogoContainer"}>
           <a
-            className={classes.logoLink}
+            className={"footerLogoLink"}
             href="https://www.instagram.com/praximisdesign"
             target="_blank"
           >
-            <img className={classes.logo} src={InstagramLogo} />
+            <img className={"footerLogo"} src={InstagramLogo} />
           </a>
         </div>
-        <div className={classes.logoContainer}>
+        <div className={"footerLogoContainer"}>
           <a
-            className={classes.logoLink}
+            className={"footerLogoLink"}
             href="https://twitter.com/praximis"
             target="_blank"
           >
-            <img className={classes.logo} src={TwitterLogo} />
+            <img className={"footerLogo"} src={TwitterLogo} />
           </a>
         </div>
       </div>
