@@ -7,6 +7,18 @@ import InstagramLogo from "../images/logo_instagram.png"
 import TwitterLogo from "../images/logo_twitter.png"
 import FooterBackground from "../images/background_footer.jpg"
 
+const footerStyle = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100vh",
+  backgroundImage: "url(" + FooterBackground + ")",
+  backgroundSize: "cover",
+  backgroundPosition: "center",  
+  backgroundAttachment: "fixed"
+}
+
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   footerRoot: {
     display: "flex",
@@ -57,7 +69,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <div className={classes.footerRoot} style={{ backgroundImage: "url(" + FooterBackground + ")"}}>
+    <div className={classes.footerRoot} style={footerStyle}>
       <div>
 
         <h5 className={classes.title}>
