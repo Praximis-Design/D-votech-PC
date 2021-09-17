@@ -7,8 +7,6 @@ import InstagramLogo from "../images/logo_instagram.png"
 import TwitterLogo from "../images/logo_twitter.png"
 import FooterBackground from "../images/background_footer.jpg"
 
-
-
 const Footer = () => {
   
   return (

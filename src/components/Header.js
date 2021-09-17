@@ -7,38 +7,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import { getThemeProps } from "@material-ui/styles";
 
 const useStyles = makeStyles(({ spacing, breakpoints }) => ({
-  root: {
-    position: "relative",
-    height: "100vh",
-    //backgroundImage: ({ backgroundImageUrl }) => `url('${backgroundImageUrl}')`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    [breakpoints.up("lg")]: {
-      backgroundAttachment: "fixed"
-    },
-    [breakpoints.down("md")]: {
-      height: "80vh"
-    }
-  },
-  title: {
-    position: "absolute",
-    top: "30%",
-    left: "50%",
-    width: "90%",
-    transform: "translate(-50%, -50%)",
-    color: "white",
-    fontSize: "4rem",
-    fontWeight: "bold",
-    textAlign: "center",
-    textShadow: "0px 0px 5px black"
-  },
-  topRightElement: {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    display: "flex",
-    padding: spacing(2)
-  },
+
   titleContainer: {
     position: "relative",
     height: "100%",
@@ -50,18 +19,18 @@ const Header = ({ title, backgroundImageUrl, handleChange }) => {
 
   const classes = useStyles({ backgroundImageUrl });
   return (
-    <div className={classes.root} id="header">
+    <div id="header">
       <Hidden smDown>
         <NavDesktop />
-        <div className={classes.topRightElement}>
+        <div className={"headerTopRightElement"}>
           <LanguageSwitcher handleChange={handleChange}/>
         </div>
       </Hidden>
       <Hidden mdUp>
         <NavTabletMobile />
       </Hidden>
-      <div className={classes.titleContainer}>
-        <h1 className={classes.title}>{title}</h1>
+      <div className={"headerTitleContainer"}>
+        <h1 className={"headerTitle"}>{title}</h1>
       </div>
     </div>
   );
