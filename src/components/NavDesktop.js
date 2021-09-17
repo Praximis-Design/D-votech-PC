@@ -60,10 +60,12 @@ const NavDesktop = () => {
             state={{ language: intl.locale }}>
             <FormattedMessage id="services.title" />
           </Link>
-          <Link to="/index">
+          <Link to="/about/"
+            state={{ language: intl.locale }}>
             <FormattedMessage id="about.title" />
           </Link>
-          <Link to="/index">
+          <Link to="/contact/"
+            state={{ language: intl.locale }}>
             <FormattedMessage id="contact.title" />
           </Link>
         </div>
