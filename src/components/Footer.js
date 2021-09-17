@@ -14,7 +14,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
-    backgroundImage: "url(" + FooterBackground + ")",
+    //backgroundImage: "url(" + FooterBackground + ")",
     backgroundSize: "cover",
     backgroundPosition: "center",
     [breakpoints.up("lg")]: {
@@ -57,7 +57,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <div className={classes.footerRoot}>
+    <div className={classes.footerRoot} style={{ backgroundImage: "url(" + FooterBackground + ")"}}>
       <div>
 
         <h5 className={classes.title}>
