@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { useIntl, FormattedMessage } from "react-intl";
 import { makeStyles } from "@material-ui/core/styles";
+import LogoPraximis from "../images/logo.png"
 
 const useStyles = makeStyles(({ spacing, customStyles }) => ({
   root: {
@@ -51,7 +52,7 @@ const NavDesktop = () => {
         <div className={classes.leftLinksContainer}>
           <Link className="no-hover" to="/"
             state={{ language: intl.locale }}>
-            <img src="/img/logo.png" alt="logo-praximis" />
+            <img src={LogoPraximis} alt="logo-praximis" />
           </Link>
         </div>
         <div className={classes.rightLinksContainer}>

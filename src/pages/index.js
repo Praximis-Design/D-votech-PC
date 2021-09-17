@@ -15,6 +15,8 @@ import {
 import Section from "../components/Section";
 import "../app.css";
 import { formatMessage } from "@formatjs/intl";
+import HeaderBackground from "../images/background_header_homepage.jpg"
+import HomepageMission from "../images/homepage_mission.jpg"
 
 const IndexPage = ({ location }) => {
 
@@ -35,12 +37,12 @@ const IndexPage = ({ location }) => {
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="homepage.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl="/img/background_header_homepage.jpg">
+          backgroundImageUrl={HeaderBackground}>
           <Section>
             <Container maxWidth="lg">
               <Grid item xs={12}>
                 <Fade>
-                  <Article text={<FormattedMessage id="homepage.missionDescription" />} imageUrl={"/img/homepage_mission.jpg"} isReversed={true}></Article>
+                  <Article text={<FormattedMessage id="homepage.missionDescription" />} imageUrl={HomepageMission} isReversed={true}></Article>
                 </Fade>
               </Grid>
             </Container>

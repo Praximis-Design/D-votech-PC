@@ -2,6 +2,10 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FormattedMessage } from "react-intl";
+import FacebookLogo from "../images/logo_facebook.png"
+import InstagramLogo from "../images/logo_instagram.png"
+import TwitterLogo from "../images/logo_twitter.png"
+import FooterBackground from "../images/background_footer.jpg"
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -10,7 +14,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
-    backgroundImage: "url('/img/background_footer.jpg')",
+    backgroundImage: "url('" + FooterBackground + "')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     [breakpoints.up("lg")]: {
@@ -67,7 +71,7 @@ const Footer = () => {
             href="https://www.facebook.com/praximisdesign"
             target="_blank"
           >
-            <img className={classes.logo} src="/img/logo_facebook.png" />
+            <img className={classes.logo} src={FacebookLogo} />
           </a>
         </div>
         <div className={classes.logoContainer}>
@@ -76,7 +80,7 @@ const Footer = () => {
             href="https://www.instagram.com/praximisdesign"
             target="_blank"
           >
-            <img className={classes.logo} src="/img/logo_instagram.png" />
+            <img className={classes.logo} src={InstagramLogo} />
           </a>
         </div>
         <div className={classes.logoContainer}>
@@ -85,7 +89,7 @@ const Footer = () => {
             href="https://twitter.com/praximis"
             target="_blank"
           >
-            <img className={classes.logo} src="/img/logo_twitter.png" />
+            <img className={classes.logo} src={TwitterLogo} />
           </a>
         </div>
       </div>
