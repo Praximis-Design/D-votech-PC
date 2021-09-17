@@ -109,3 +109,7 @@ th:not([align]) {
 #categoryComboBox{
   background-color: transparent;
 }
+
+#header {
+  background-image: url(../src/images/background_header_homepage.jpg);
+}

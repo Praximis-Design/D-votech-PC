@@ -10,7 +10,7 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   root: {
     position: "relative",
     height: "100vh",
-    backgroundImage: ({ backgroundImageUrl }) => `url('${backgroundImageUrl}')`,
+    //backgroundImage: ({ backgroundImageUrl }) => `url('${backgroundImageUrl}')`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     [breakpoints.up("lg")]: {
@@ -50,7 +50,7 @@ const Header = ({ title, backgroundImageUrl, handleChange }) => {
 
   const classes = useStyles({ backgroundImageUrl });
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="header">
       <Hidden smDown>
         <NavDesktop />
         <div className={classes.topRightElement}>
