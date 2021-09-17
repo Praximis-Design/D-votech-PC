@@ -113,3 +113,7 @@ th:not([align]) {
 #header {
   background-image: url(../src/images/background_header_homepage.jpg);
 }
+
+#footer {
+  background-image: url(../src/images/background_footer.jpg);
+}
