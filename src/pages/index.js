@@ -1,4 +1,5 @@
 import * as React from "react";
+import ReactDOM from 'react-dom';
 import { useState, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import DefaultLayout from "../components/DefaultLayout";
@@ -13,9 +14,9 @@ import {
   Fade
 } from "@material-ui/core";
 import Section from "../components/Section";
-import "../app.css";
 import HeaderBackground from "../images/background_header_homepage.jpg";
 import HomepageMission from "../images/homepage_mission.jpg";
+import "../app.css";
 
 const IndexPage = ({ location }) => {
 
@@ -33,10 +34,10 @@ const IndexPage = ({ location }) => {
 
   return (
     <>
-      <StaticIntlProvider locale={locale} >
+      {/*<StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="homepage.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={HeaderBackground}>
+          backgroundImageUrl={HeaderBackground}>*/}
           <Section>
             <Container maxWidth="lg">
               <Grid item xs={12}>
@@ -46,8 +47,8 @@ const IndexPage = ({ location }) => {
               </Grid>
             </Container>
           </Section>
-        </DefaultLayout>
-      </StaticIntlProvider>
+        {/*</DefaultLayout>
+      </StaticIntlProvider>*/}
     </>
   )
 }
