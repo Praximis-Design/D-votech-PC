@@ -13,8 +13,7 @@ import {
 } from "@material-ui/core";
 import Article from "../components/Article";
 import Section from "../components/Section";
-import HeaderBackground from "../images/background_header_homepage.jpg"
-import HomepageMission from "../images/homepage_mission.jpg"
+import HeaderBackground from "../images/contact_Desktop.jpg"
 import ContactForm from "../components/ContactForm";
 import "../app.css";
 
@@ -43,10 +42,8 @@ const ContactPage = ({ location }) => {
             <Container maxWidth="lg">
 
               <Section>
-                <Grid item xs={12}>
-                  <Fade>
-                    <Article text={<FormattedMessage id="contact.moreInfoDescription" />} isReversed={true}></Article>
-                  </Fade>
+                <Grid item xs={12} className="contactMoreInfo">
+                    <FormattedMessage id="contact.moreInfoDescription" />
                 </Grid>
               </Section>
 

@@ -13,8 +13,11 @@ import {
 } from "@material-ui/core";
 import Article from "../components/Article";
 import Section from "../components/Section";
-import HeaderBackground from "../images/background_header_homepage.jpg"
-import HomepageMission from "../images/homepage_mission.jpg"
+import HeaderBackground from "../images/services_Desktop.jpg"
+import RepairImage from "../images/services_Desktop2.jpg"
+import ConfigImage from "../images/services_desktop3.jpg"
+import ModifImage from "../images/services_desktop4.jpg"
+import DeliveryImage from "../images/services_desktop5.jpg"
 import "../app.css";
 
 // markup
@@ -44,7 +47,7 @@ const ServicesPage = ({ location }) => {
               <Section>
               <Grid item xs={12}>
                 <Fade>
-                  <Article text={<FormattedMessage id="services.computerRepairDescription" />} imageUrl={HomepageMission} isReversed={true}></Article>
+                  <Article title={<FormattedMessage id="services.computerRepairTitle" />} text={<FormattedMessage id="services.computerRepairDescription" />} imageUrl={RepairImage} isReversed={true}></Article>
                 </Fade>
               </Grid>
               </Section>
@@ -52,7 +55,7 @@ const ServicesPage = ({ location }) => {
               <Section>              
               <Grid item xs={12}>
                 <Fade>
-                  <Article text={<FormattedMessage id="services.customConfigDescription" />} imageUrl={HomepageMission} isReversed={false}></Article>
+                  <Article title={<FormattedMessage id="services.customConfigTitle" />} text={<FormattedMessage id="services.customConfigDescription" />} imageUrl={ConfigImage} isReversed={false}></Article>
                 </Fade>
               </Grid>
               </Section>
@@ -60,7 +63,7 @@ const ServicesPage = ({ location }) => {
               <Section>
               <Grid item xs={12}>
                 <Fade>
-                  <Article text={<FormattedMessage id="services.computerModifDescription" />} imageUrl={HomepageMission} isReversed={true}></Article>
+                  <Article title={<FormattedMessage id="services.computerModifTitle" />} text={<FormattedMessage id="services.computerModifDescription" />} imageUrl={ModifImage} isReversed={true}></Article>
                 </Fade>
               </Grid>
               </Section>
@@ -68,7 +71,7 @@ const ServicesPage = ({ location }) => {
               <Section>
               <Grid item xs={12}>
                 <Fade>
-                  <Article text={<FormattedMessage id="services.homeDeliveryDescription" />} imageUrl={HomepageMission} isReversed={false}></Article>
+                  <Article title={<FormattedMessage id="services.homeDeliveryTitle" />} text={<FormattedMessage id="services.homeDeliveryDescription" />} imageUrl={DeliveryImage} isReversed={false}></Article>
                 </Fade>
               </Grid>
               </Section>

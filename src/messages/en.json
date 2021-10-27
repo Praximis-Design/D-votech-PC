@@ -1,7 +1,9 @@
 
 {
   "footer.title": "Follow us on social networks",
-  "homepage.title": "Devotech PC, at your service for your IT needs.",
+  "footer.copyrights": "All rights reserved to Dévotech PC",
+  
+  "homepage.title": "DEVOTECH PC, AT YOUR SERVICE FOR YOUR IT NEEDS",
   "homepage.ogTitle": "Devotech PC - Homepage",
   "homepage.missionTitle": "Our Mission",
   "homepage.missionDescription": "Devotech PC is the perfect place for your computer needs. Combining complete computer personalization with in-home delivery and configuration, we go above and beyond to provide you with unparalleled customer service.",
@@ -11,14 +13,14 @@
   "homepage.valuesDescription": "Efficiency, simplicity, and supporting local talent to bring your projects to life.",
   "homepage.valuesButton": "Learn More",
 
-  "about.title": "About Us",
+  "about.title": "ABOUT US",
   "about.ogTitle": "Devotech PC - About Us",
   "about.customerServiceTitle": "Customer service description text",
   "about.customerServiceDescription": "Devotech PC is more than the configuration of a simple basic computer. It is the configuration of a personalized computer that matches your vision and corresponds as precisely as possible to your needs and desires. By integrating home delivery as well as direct on-site configuration with these services, Devotech PC sets itself apart from the competition with its unparalleled customer service and customer satisfaction monitoring.",
   "about.homeServiceTitle": "Home service explanation",
   "about.homeServiceDescription": "Devotech PC's home service is one of a kind. It includes the personalized delivery of your computer components and the configuration of said components directly to your home by our qualified personnel. In addition, we offer the installation of all software necessary to operate a computer.",
 
-  "services.title": "Our Services",
+  "services.title": "OUR SERVICES",
   "services.ogTitle": "Devotech PC - Nos Services",
   "services.computerRepairTitle": "Computer repair and maintenance (software or components)",
   "services.computerRepairDescription": "Devotech PC provides repair and maintenance services for your computers. From cabling to software management, Devotech PC takes care of everything. Do you want to start fresh while keeping your current computer? Complete formatting of your computer and a new installation of your operating system are available.",
@@ -29,7 +31,7 @@
   "services.homeDeliveryTitle": "Home Delivery and Installation",
   "services.homeDeliveryDescription": "Depending on the location, home delivery and installation is an option unique to Devotech PC, so no travel on your end. We can thus ensure an optimal assembly and configuration of your computer.",
   
-  "contact.title": "Contact Us",
+  "contact.title": "CONTACT US",
   "contact.ogTitle": "Devotech PC - Contact us",
   "contact.moreInfoTitle": "Let’s Talk.",
   "contact.moreInfoDescription": "Do not hesitate to contact us for more information. We are happy to get back to you as soon as possible.",

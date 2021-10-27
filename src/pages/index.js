@@ -14,8 +14,8 @@ import {
   Fade
 } from "@material-ui/core";
 import Section from "../components/Section";
-import HeaderBackground from "../images/background_header_homepage.jpg";
-import HomepageMission from "../images/homepage_mission.jpg";
+import HeaderBackground from "../images/accueil_Desktop.jpg";
+import HomepageMission from "../images/accueil_desktop2.jpg";
 import "../app.css";
 
 const IndexPage = ({ location }) => {

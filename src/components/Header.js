@@ -9,7 +9,7 @@ import { getThemeProps } from "@material-ui/styles";
 const Header = ({ title, backgroundImageUrl, handleChange }) => {
 
   return (
-    <div id="header">
+    <div id="header" style={{backgroundImage: "url(" + backgroundImageUrl + ")"}}>
       <Hidden smDown>
         <NavDesktop />
         <div className={"headerTopRightElement"}>

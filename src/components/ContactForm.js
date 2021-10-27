@@ -69,71 +69,68 @@ class ContactForm extends React.Component {
 
     return (
       <>
-        <form onSubmit={this.sendEmail}>
+        <form onSubmit={this.sendEmail} className="contactForm">
           {/* Section First et Last Name */}
-          <TextField
-            fullWidth={true}
-            variant="outlined"
-            label={<FormattedMessage id="contact.firstAndLastName"></FormattedMessage>}
-            inputProps={{ style: { fontSize: 18 } }}
-            style={customStyle}
-            value={this.state.firstAndLastName}
-            name="firstAndLastName"
-            onChange={this.handleChange}
-            required>
-          </TextField>
+          <FormattedMessage id="contact.firstAndLastName">
+          { placeholder =>
+            <input type="text"
+                  className="contactTextField"
+                  placeholder={placeholder}
+                  value={this.state.firstAndLastName}
+                  name="firstAndLastName"
+                  onChange={this.handleChange}
+                  required
+            />
+          }
+          </FormattedMessage>
 
           {/* Section Phone */}
-          <TextField
-            fullWidth={true}
-            variant="outlined"
-            label={<FormattedMessage id="contact.phone"></FormattedMessage>}
-            inputProps={{ style: { fontSize: 18 } }}
-            style={customStyle}
-            value={this.state.phone}
-            name="phone"
-            onChange={this.handleChange}
-            required>
-          </TextField>
+          <FormattedMessage id="contact.phone">
+          { placeholder =>
+            <input type="text"
+                  className="contactTextField"
+                  placeholder={placeholder}
+                  value={this.state.phone}
+                  name="phone"
+                  onChange={this.handleChange}
+                  required
+            />
+          }
+          </FormattedMessage>
 
           {/* Section Email */}
-          <TextField
-            fullWidth={true}
-            variant="outlined"
-            label={<FormattedMessage id="contact.email"></FormattedMessage>}
-            inputProps={{ style: { fontSize: 18 } }}
-            style={customStyle}
-            value={this.state.email}
-            name="email"
-            onChange={this.handleChange}
-            required>
-          </TextField>
+          <FormattedMessage id="contact.email">
+          { placeholder =>
+            <input type="text"
+                  className="contactTextField"
+                  placeholder={placeholder}
+                  value={this.state.email}
+                  name="email"
+                  onChange={this.handleChange}
+                  required
+            />
+          }
+          </FormattedMessage>
 
           {/* Section Email Body */}
-          <TextField
-            fullWidth={true}
-            label={<FormattedMessage id="contact.emailBody"></FormattedMessage>}
-            inputProps={{ style: { fontSize: 18 } }}
-            rows={4}
-            style={customStyle}
-            multiline={true}
-            variant="outlined"
-            value={this.state.emailBody}
-            name="emailBody"
-            onChange={this.handleChange}
-            required>
-          </TextField>
+          <FormattedMessage id="contact.emailBody">
+          { placeholder =>
+            <textarea 
+                  className="contactTextArea"
+                  placeholder={placeholder}
+                  value={this.state.emailBody}
+                  name="emailBody"
+                  onChange={this.handleChange}      
+                  required
+            />
+          }
+          </FormattedMessage>
 
-          <Button
-            variant="contained"
-            color="primary"
-            type="submit"
-            style={{ marginBottom: "2rem", borderRadius: 5 }}
-            size="small"
-            text="contact.sendButton"
-            endIcon={<Icon className="fa fa-paper-plane-o"></Icon>}>
-            <FormattedMessage id="contact.sendButton"></FormattedMessage>
-          </Button>
+          <FormattedMessage id="contact.sendButton">
+          { buttonText =>
+            <button type="submit" className="contactSendButton" text={buttonText} >{buttonText}</button>
+          }
+          </FormattedMessage>
 
           <Fade in={this.state.hasSuccessMessage} mountOnEnter unmountOnExit>
             <Alert onClose={() => { this.setState({ hasSuccessMessage: false }); }} severity="success">

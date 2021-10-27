@@ -1,6 +1,8 @@
 {
-  "footer.title": "Suivez-nous sur les réseaux sociaux!",
-  "homepage.title": "Dévotech PC, à votre service pour vos besoins informatique.",
+  "footer.title": "Suivez-nous sur les réseaux sociaux",
+  "footer.copyrights": "Tout droits réservé à Dévotech PC",
+
+  "homepage.title": "DÉVOTECH PC, À VOTRE SERVICE POUR VOS {br} BESOINS INFORMATIQUE",
   "homepage.ogTitle": "Devotech PC - Page d'accueil",
   "homepage.missionTitle": "Notre Mission",
   "homepage.missionDescription": "Dévotech PC, c'est l'endroit idéal pour vos besoins d'ordinateur. Alliant la personnalisation complète d'un ordinateur et la livraison à domicile, nous allons au-delà des attentes afin de vous assurer un service à la clientèle hors pair.",
@@ -10,14 +12,14 @@
   "homepage.valuesDescription": "L’efficacité, la simplicité, et le soutien de la main-d’œuvre locale afin de réaliser vos projets.",
   "homepage.valuesButton": "En savoir plus",
 
-  "about.title": "À propos de nous",
+  "about.title": "À PROPOS DE NOUS",
   "about.ogTitle": "Devotech PC - À propos de nous",
   "about.customerServiceTitle": "Service à l’image du client",
   "about.customerServiceDescription": "« Dévotech PC, c’est plus que l’assemblage d’un simple ordinateur de base. C’est l’assemblage d’un ordinateur personnalisé, à votre image et qui correspond le plus justement possible à vos besoins et désirs. En intégrant une livraison à domicile ainsi qu’un assemblage directement sur place à ces services, Dévotech PC se démarque de la concurrence avec son service à la clientèle hors pair et un suivit de la satisfaction de ses clients. »",
   "about.homeServiceTitle": "Service à domicile",
   "about.homeServiceDescription": "« Le service à domicile de Dévotech PC est unique en son genre. Il inclut la livraison personnalisée des composants de votre ordinateur et l’assemblage desdites composantes directement chez vous par notre personnel qualifié. De plus, nous offrons l’installation de tous logiciels nécessaires au bon fonctionnement d’un ordinateur. »",
 
-  "services.title": "Nos Services",
+  "services.title": "NOS SERVICES",
   "services.ogTitle": "Devotech PC - Nos Services",
   "services.computerRepairTitle": "Réparation et entretien d’ordinateurs (logiciels ou composants)",
   "services.computerRepairDescription": "Dévotech PC offre un service de réparation et d’entretien pour vos ordinateurs. De la simple gestion du câblage à l’installation de logiciels, Dévotech PC s’occupe de tout. Vous voulez repartir à neuf tout en conservant votre ordinateur actuel ? Un formatage complet et une nouvelle installation de votre système d’exploitation sont disponibles.",
@@ -28,7 +30,7 @@
   "services.homeDeliveryTitle": "Livraison et installation à domicile",
   "services.homeDeliveryDescription": "Tout dépendant du lieu, la livraison et l’installation à domicile sont des options uniques à Dévotech PC, donc pas de déplacement de votre côté. Nous pouvons ainsi assurer un assemblage et une configuration optimale de votre ordinateur",
 
-  "contact.title": "Contacter-nous",
+  "contact.title": "CONTACTEZ-NOUS",
   "contact.ogTitle": "Devotech PC - Nous Joindre",
   "contact.moreInfoTitle": "Let’s Talk.",
   "contact.moreInfoDescription": "N’hésitez pas à nous contacter pour plus d’informations. C’est avec plaisir que nous vous répondons dans les plus brefs délais.",

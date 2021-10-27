@@ -114,7 +114,7 @@ th:not([align]) {
 ------------------------------------------------------------------*/
 
 .sectionWrapper {
-  padding: 5em;
+  padding: 6em;
 }
 
 /*------------------------------------------------------------------
@@ -122,11 +122,98 @@ th:not([align]) {
 ------------------------------------------------------------------*/
 
 .articleTextWrapperLeft {
-  padding-right: 1.5em;
+  padding-right: 2em;
+  color: #000067;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: Heebo, sans-serif;
+  font-weight: lighter;
 }
 
 .articleTextWrapperRight {
-  padding-left: 1.5em;
+  padding-left: 2em;
+  color: #000067;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: Heebo, sans-serif;
+  font-weight: lighter;
+}
+
+.articleTextWrapperTitle {
+  padding-bottom: 1em;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*------------------------------------------------------------------
+== Contact page
+------------------------------------------------------------------*/
+
+.contactMoreInfo {
+  padding-left: 10em;
+  padding-right: 10em;
+  color: #000067;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: Heebo, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.contactTextField {
+  height: 69px;
+  border-radius: 52px;
+  width: 100%;
+  background-color: #F0F0F0;
+  border: none;
+  padding-left: 52px;
+  padding-right: 52px;
+  margin-bottom: 2em;
+  font-family: Heebo,sans-serif;
+  font-size: 16px;
+  color: #000067;
+}
+
+.contactTextArea {  
+  height: 69px;
+  border-radius: 52px;
+  width: 100%;
+  background-color: #F0F0F0;
+  border: none;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-left: 52px;
+  padding-right: 52px;
+  height: 346px;
+  max-height: 346px;
+  font-family: Heebo,sans-serif;
+  font-size: 16px;
+  color: #000067;
+  margin-bottom: 6em;
+  overflow: hidden;
+  resize: none;
+}
+
+.contactForm {
+  text-align: center;
+}
+
+.contactSendButton {
+  height: 64px;
+  border-radius: 48px;
+  font-family: Heebo,sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  width: 260px;
+  background-color: #000067;
+  border: none;
+  margin: auto;
+}
+
+.contactSendButton:hover {
+  background-color: #131364;
+  cursor: pointer;
 }
 
 /*------------------------------------------------------------------
@@ -134,7 +221,7 @@ th:not([align]) {
 ------------------------------------------------------------------*/
 
 #header {
-  background-image: url(../src/images/background_header_homepage.jpg);
+  /*background-image: url(../src/images/background_header_homepage.jpg);*/
   position: relative;
   height: 100vh;
   background-size: cover;
@@ -149,10 +236,24 @@ th:not([align]) {
   width: 90%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 4rem;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   text-shadow: 0px 0px 5px black;
+  line-height: 55px;
+  font-family: Nunito, sans-serif;
+  font-size: 40px;
+}
+
+.headerNavLink {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Nunito, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.headerNavLink:hover {
+  text-decoration: underline;
 }
 
 .headerTopRightElement {
@@ -174,12 +275,13 @@ th:not([align]) {
 ------------------------------------------------------------------*/
 
 #footer {
-  background-image: url(../src/images/background_footer.jpg);
+  /*background-image: url(../src/images/background_footer.jpg);*/
+  background-color: #000067;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 496px;
   background-size: cover;
   background-position: center;  
   background-attachment: fixed;
@@ -188,9 +290,15 @@ th:not([align]) {
 .footerTitle {
   color: white;
   margin-top: 1.5rem;
-  font-size: 1.75rem;
+  font-size: 25px;
   font-weight: bold;
-  font-family: Heebo, sans-serif;
+  font-family: Nunito, sans-serif;
+}
+
+.footerCopyrights {
+  color: white;
+  font-size: 15px;
+  font-family: Nunito, sans-serif;
 }
 
 .footerLogosContainer {
@@ -198,11 +306,20 @@ th:not([align]) {
 }
 
 .footerLogoContainer {
-  padding: 5em;
+  min-width: 15em;
+  min-height: 10em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .footerLogoLink {
   display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: Nunito, sans-serif;
   transform: "scale(1)";
   transition: "transform 500ms";  
 }

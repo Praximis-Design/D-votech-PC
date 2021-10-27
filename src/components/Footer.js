@@ -2,10 +2,9 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FormattedMessage } from "react-intl";
-import FacebookLogo from "../images/logo_facebook.png"
+/*import FacebookLogo from "../images/logo_facebook.png"
 import InstagramLogo from "../images/logo_instagram.png"
-import TwitterLogo from "../images/logo_twitter.png"
-import FooterBackground from "../images/background_footer.jpg"
+import TwitterLogo from "../images/logo_twitter.png"*/
 
 const Footer = () => {
   
@@ -24,7 +23,7 @@ const Footer = () => {
             href="https://www.facebook.com/praximisdesign"
             target="_blank"
           >
-            <img className={"footerLogo"} src={FacebookLogo} />
+            Facebook
           </a>
         </div>
         <div className={"footerLogoContainer"}>
@@ -33,7 +32,7 @@ const Footer = () => {
             href="https://www.instagram.com/praximisdesign"
             target="_blank"
           >
-            <img className={"footerLogo"} src={InstagramLogo} />
+            Instagram
           </a>
         </div>
         <div className={"footerLogoContainer"}>
@@ -42,9 +41,14 @@ const Footer = () => {
             href="https://twitter.com/praximis"
             target="_blank"
           >
-            <img className={"footerLogo"} src={TwitterLogo} />
+            Twitter
           </a>
         </div>
+      </div>
+      <div>
+        <h5 className={"footerCopyrights"}>
+          <FormattedMessage id="footer.copyrights" />
+        </h5>
       </div>
     </div>
   );

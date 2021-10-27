@@ -13,8 +13,9 @@ import {
 } from "@material-ui/core";
 import Article from "../components/Article";
 import Section from "../components/Section";
-import HeaderBackground from "../images/background_header_homepage.jpg"
-import HomepageMission from "../images/homepage_mission.jpg"
+import HeaderBackground from "../images/a_propos_Desktop.jpg"
+import CustomImage from "../images/a_propos_desktop3.jpg"
+import DeliveryImage from "../images/a_propos_desktop2.jpg"
 import "../app.css";
 
 // markup
@@ -44,7 +45,7 @@ const AboutPage = ({ location }) => {
               <Section>
                 <Grid item xs={12}>
                   <Fade>
-                    <Article text={<FormattedMessage id="about.customerServiceDescription" />} imageUrl={HomepageMission} isReversed={true}></Article>
+                    <Article text={<FormattedMessage id="about.customerServiceDescription" />} imageUrl={CustomImage} isReversed={true}></Article>
                   </Fade>
                 </Grid>
               </Section>
@@ -52,7 +53,7 @@ const AboutPage = ({ location }) => {
               <Section>
                 <Grid item xs={12}>
                   <Fade>
-                    <Article text={<FormattedMessage id="about.homeServiceDescription" />} imageUrl={HomepageMission} isReversed={false}></Article>
+                    <Article text={<FormattedMessage id="about.homeServiceDescription" />} imageUrl={DeliveryImage} isReversed={false}></Article>
                   </Fade>
                 </Grid>
               </Section>
