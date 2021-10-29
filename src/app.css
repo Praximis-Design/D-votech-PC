@@ -420,6 +420,7 @@ th:not([align]) {
 
   .headerTitleContainer {
     background-size: 100%;
+    background-position: top;
   }
 
   .headerNavLink {
