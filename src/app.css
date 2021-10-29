@@ -416,6 +416,10 @@ th:not([align]) {
     width: 75%;
   }
 
+  .headerTitleContainer {
+    background-size: 100% 100%;
+  }
+
   .headerNavLink {
     font-size: 18px;
   }
