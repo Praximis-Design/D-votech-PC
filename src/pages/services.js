@@ -44,7 +44,7 @@ const ServicesPage = ({ location }) => {
     <StaticIntlProvider locale={locale} >
       <DefaultLayout title={<FormattedMessage id="services.title" values={{ br: <br></br> }} />}
         handleChange={handleChange}
-        backgroundImageUrl={isXsDown ? HeaderBackgroundPhone : HeaderBackgroundDesktop}>
+        backgroundImageUrl={HeaderBackgroundPhone}>
           <Section>
             <Container maxWidth="lg">
               <Section>

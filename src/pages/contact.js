@@ -40,7 +40,7 @@ const ContactPage = ({ location }) => {
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="contact.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={isXsDown ? HeaderBackgroundPhone : HeaderBackgroundDesktop}>
+          backgroundImageUrl={HeaderBackgroundPhone}>
           <Section>
             <Container maxWidth="lg">
 
