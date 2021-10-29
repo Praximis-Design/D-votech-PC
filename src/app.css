@@ -408,7 +408,7 @@ th:not([align]) {
 == For Smart phone
 -------------------------------------------------------------------------------*/
 
-@media (max-width: 600px) and (orientation: portrait)  {
+@media (max-width: 1024px) and (orientation: portrait)  {
 
   .headerTitle {
     font-size: 20px;

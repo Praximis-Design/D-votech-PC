@@ -37,7 +37,7 @@ const ServicesPage = ({ location }) => {
 
   const [locale, setLocale] = useState("en")
 
-  const isXsDown = useMediaQuery("(max-width: 600px) and (orientation: portrait)");
+  const isXsDown = useMediaQuery("(max-width: 1024px) and (orientation: portrait)");
 
   return (
     <>
