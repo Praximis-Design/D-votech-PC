@@ -13,7 +13,8 @@ import {
 } from "@material-ui/core";
 import Article from "../components/Article";
 import Section from "../components/Section";
-import HeaderBackground from "../images/a_propos_Desktop.jpg"
+import HeaderBackgroundDesktop from "../images/a_propos_Desktop.jpg"
+import HeaderBackgroundPhone from "../images/à_propos_iPhone.jpg"
 import CustomImage from "../images/a_propos_desktop3.jpg"
 import DeliveryImage from "../images/a_propos_desktop2.jpg"
 import "../app.css";
@@ -32,6 +33,16 @@ const AboutPage = ({ location }) => {
   }, []);
 
   const [locale, setLocale] = useState("en")
+
+  let HeaderBackground = HeaderBackgroundDesktop;
+
+  const isXsDown = useMediaQuery("(max-width: 600px) and (orientation: portrait)", {
+    defaultMatches: true
+  });
+
+  if (isXsDown) {
+    HeaderBackground = HeaderBackgroundPhone;
+  }
 
   return (
     <>

@@ -13,7 +13,8 @@ import {
 } from "@material-ui/core";
 import Article from "../components/Article";
 import Section from "../components/Section";
-import HeaderBackground from "../images/contact_Desktop.jpg"
+import HeaderBackgroundDesktop from "../images/contact_Desktop.jpg"
+import HeaderBackgroundPhone from "../images/contact_iPhone.jpg"
 import ContactForm from "../components/ContactForm";
 import "../app.css";
 
@@ -31,6 +32,16 @@ const ContactPage = ({ location }) => {
   }, []);
 
   const [locale, setLocale] = useState("en")
+
+  let HeaderBackground = HeaderBackgroundDesktop;
+
+  const isXsDown = useMediaQuery("(max-width: 600px) and (orientation: portrait)", {
+    defaultMatches: true
+  });
+
+  if (isXsDown) {
+    HeaderBackground = HeaderBackgroundPhone;
+  }
 
   return (
     <>

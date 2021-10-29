@@ -5,16 +5,15 @@ import { useTheme } from "@material-ui/styles";
 
 const Article = ({ text, imageUrl, isReversed, title }) => {
   
-  /*const theme = useTheme();
-  const isXsDown = useMediaQuery(theme.breakpoints.down("xs"), {
+  const isXsDown = useMediaQuery("(max-width: 600px) and (orientation: portrait)", {
     defaultMatches: true
-  });*/
+  });
   let direction = isReversed ? "row-reverse" : "row";
   let alignItems = "center"// ? "stretch" : "center";
-/*
+
   if (isXsDown) {
     direction = "column-reverse";
-  }*/
+  }
 
   return (
     <div>

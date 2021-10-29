@@ -14,11 +14,14 @@ import {
   Fade
 } from "@material-ui/core";
 import Section from "../components/Section";
-import HeaderBackground from "../images/accueil_Desktop.jpg";
+import HeaderBackgroundDesktop from "../images/accueil_Desktop.jpg";
+import HeaderBackgroundPhone from "../images/accueil_iPhone.jpg";
 import HomepageMission from "../images/accueil_desktop2.jpg";
 import "../app.css";
 
 const IndexPage = ({ location }) => {
+
+  let HeaderBackground = HeaderBackgroundDesktop;
 
   const handleChange = (e) => {
     setLocale(e.target.name);
@@ -32,6 +35,14 @@ const IndexPage = ({ location }) => {
 
   const [locale, setLocale] = useState("en")
 
+  const isXsDown = useMediaQuery("(max-width: 600px) and (orientation: portrait)", {
+    defaultMatches: true
+  });
+
+  if (isXsDown) {
+    HeaderBackground = HeaderBackgroundPhone;
+  }
+
   return (
     <>
       <StaticIntlProvider locale={locale} >
@@ -42,7 +53,9 @@ const IndexPage = ({ location }) => {
             <Container maxWidth="lg">
               <Grid item xs={12}>
                 <Fade>
-                  <Article text={<FormattedMessage id="homepage.missionDescription" />} imageUrl={HomepageMission} isReversed={true}></Article>
+                  <Section>
+                    <Article text={<FormattedMessage id="homepage.missionDescription" />} imageUrl={HomepageMission} isReversed={true}></Article>
+                  </Section>
                 </Fade>
               </Grid>
             </Container>

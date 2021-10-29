@@ -42,9 +42,10 @@ const useStyles = makeStyles(({ spacing, customStyles }) => ({
   }
 }));
 
-const NavDesktop = () => {
+const NavDesktop = ({ handleChange }) => {
   const classes = useStyles();
   const intl = useIntl();
+  let currentLanguage = intl.locale;
 
   return (
     <div >
@@ -71,6 +72,25 @@ const NavDesktop = () => {
             className="headerNavLink">
             <FormattedMessage id="contact.title" />
           </Link>
+          <a
+            className={
+              currentLanguage === "fr" ? "headerNavLink headerNavLinkActive" : "headerNavLink"
+            }
+            onClick={handleChange}
+            name={"fr"}
+          >
+            FR
+          </a>
+          <span className="headerNavLinkSeparator">/</span>
+          <a
+            className={
+              currentLanguage === "en" ? "headerNavLink headerNavLinkActive" : "headerNavLink"
+            }
+            onClick={handleChange}
+            name={"en"}
+          >
+            EN
+          </a>
         </div>
       </div>
     </div>

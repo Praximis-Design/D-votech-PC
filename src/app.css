@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;800&family=Nunito+Sans:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;900&display=swap');
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
@@ -53,13 +54,6 @@ textarea {
 
 html {
   box-sizing: border-box;
-  font-family: 'Playfair Display', sans-serif;
-}
-
-@media (max-width: 960px) {
-  html {
-    font-size: 12px;
-  }
 }
 
 *, *::before, *::after {
@@ -97,24 +91,18 @@ th:not([align]) {
 
 .MuiGrid-container {
   width: 100% !important;
-  margin: 0 !important;
-}
-
-@media (min-width: 1920px) {
-  html {
-    font-size: 20px;
-  }
 }
 
 #categoryComboBox{
   background-color: transparent;
 }
+
 /*------------------------------------------------------------------
 == Section Component
 ------------------------------------------------------------------*/
 
 .sectionWrapper {
-  padding: 6em;
+  padding: 5em;
 }
 
 /*------------------------------------------------------------------
@@ -127,7 +115,7 @@ th:not([align]) {
   font-size: 16px;
   line-height: 21px;
   font-family: Heebo, sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .articleTextWrapperRight {
@@ -136,13 +124,14 @@ th:not([align]) {
   font-size: 16px;
   line-height: 21px;
   font-family: Heebo, sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .articleTextWrapperTitle {
   padding-bottom: 1em;
   font-size: 20px;
-  font-weight: bold;
+  font-family: Heebo, sans-serif;
+  font-weight: 900;
 }
 
 /*------------------------------------------------------------------
@@ -150,14 +139,14 @@ th:not([align]) {
 ------------------------------------------------------------------*/
 
 .contactMoreInfo {
-  padding-left: 10em;
-  padding-right: 10em;
   color: #000067;
   font-size: 16px;
   line-height: 21px;
   font-family: Heebo, sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
   text-align: center;
+  width: 70%;
+  margin: auto;
 }
 
 .contactTextField {
@@ -170,6 +159,7 @@ th:not([align]) {
   padding-right: 52px;
   margin-bottom: 2em;
   font-family: Heebo,sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #000067;
 }
@@ -187,6 +177,7 @@ th:not([align]) {
   height: 346px;
   max-height: 346px;
   font-family: Heebo,sans-serif;
+  font-weight: 400;
   font-size: 16px;
   color: #000067;
   margin-bottom: 6em;
@@ -203,7 +194,7 @@ th:not([align]) {
   border-radius: 48px;
   font-family: Heebo,sans-serif;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 800;
   color: white;
   width: 260px;
   background-color: #000067;
@@ -236,7 +227,7 @@ th:not([align]) {
   width: 90%;
   transform: translate(-50%, -50%);
   color: white;
-  font-weight: bolder;
+  font-weight: 900;
   text-align: center;
   text-shadow: 0px 0px 5px black;
   line-height: 55px;
@@ -248,8 +239,9 @@ th:not([align]) {
   text-decoration: none;
   font-size: 20px;
   font-family: Nunito, sans-serif;
-  font-weight: bold;
+  font-weight: 900;
   color: white;
+  cursor: pointer;
 }
 
 .headerNavLink:hover {
@@ -268,6 +260,81 @@ th:not([align]) {
   position: relative;
   height: 100%;
   margin-top: 5em;
+}
+
+.headerNavLinkSeparator {
+  text-decoration: none;
+  font-size: 24px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Nunito, sans-serif;
+  font-weight: 900;
+  color: white;
+}
+
+.headerNavLinkActive {
+  text-decoration: underline;
+}
+
+.menuHamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  right: 15%;
+  top: 5%;
+  height: 60px;
+  width: 60px;
+  z-index: 1;
+}
+
+.menuHamburger > div {
+  background-color: white;
+  height: 3px;
+  width: 40px;
+}
+
+.mobileNavContainer {
+  display: flex;
+}
+
+.mobileNavCloseButton {
+  fill: white;
+  width: 60px;
+}
+
+.mobileNavTop {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  padding-top: 20%;
+  padding-right: 15%;
+}
+
+.mobileNav {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #000067;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+}
+
+.mobileNavVisible {
+  transform: translateX(0%);
+  transition-duration: 500ms;
+}
+
+.mobileNavLinksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40%;
+  margin-top: 45%;
 }
 
 /*------------------------------------------------------------------
@@ -291,7 +358,7 @@ th:not([align]) {
   color: white;
   margin-top: 1.5rem;
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 900;
   font-family: Nunito, sans-serif;
 }
 
@@ -299,6 +366,7 @@ th:not([align]) {
   color: white;
   font-size: 15px;
   font-family: Nunito, sans-serif;
+  font-weight: 300;
 }
 
 .footerLogosContainer {
@@ -318,7 +386,7 @@ th:not([align]) {
   color: white;
   text-decoration: none;
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: 900;
   font-family: Nunito, sans-serif;
   transform: "scale(1)";
   transition: "transform 500ms";  
@@ -330,4 +398,97 @@ th:not([align]) {
 
 .footerLogo {
   max-width: 2em;
+}
+
+
+/*------------------------------------------------------------------------------
+== For Smart phone
+-------------------------------------------------------------------------------*/
+
+@media (max-width: 600px) and (orientation: portrait)  {
+
+  .headerTitle {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .headerNavLink {
+    font-size: 18px;
+  }
+
+  .mobileNavCloseButton {
+    width: 30px;
+  }
+
+  .footerTitle {
+    font-size: 18px;
+    line-height: 22px;
+    width: 200px;
+    text-align: center;
+  }
+
+  .footerLogoContainer {
+    min-width: 6em;
+    min-height: 7em;
+  }
+
+  .footerLogoLink {
+    font-size: 10px;
+  }
+
+  .footerCopyrights {
+    font-size: 10px;
+  }
+
+  #footer {
+    height: 235px;
+  }
+  
+  .articleTextWrapperRight, .articleTextWrapperLeft {
+    padding-left: 1em;
+    padding-right: 2em;
+    font-size: 12px;
+    line-height: 17px;
+    font-family: Heebo, sans-serif;
+    font-weight: 300;
+  }
+  
+  .articleTextWrapperTitle {
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .sectionWrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .contactMoreInfo {
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .contactTextArea {
+    margin-bottom: 3em;
+    font-size: 12px;
+    border-radius: 34px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .contactTextField {
+    font-size: 12px;
+    height: 43px;
+    border-radius: 34px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
 }

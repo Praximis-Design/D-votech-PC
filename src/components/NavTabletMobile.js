@@ -1,106 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import { makeStyles } from "@material-ui/core/styles";
+import { useIntl, FormattedMessage } from "react-intl";
 
-const useStyles = makeStyles(({ spacing, breakpoints }) => ({
-  root: {
-    display: "flex",
-    alignItems: "center",
-    padding: `${spacing(2)}px`,
-    justifyContent: "space-between",
-    [breakpoints.down("xs")]: {
-      paddingTop: spacing(1)
-    }
-  },
-  logo: {
-    [breakpoints.down("xs")]: {
-      maxWidth: "8rem"
-    }
-  },
-  hamburger: {
-    width: "60px",
-    cursor: "pointer",
-    [breakpoints.down("xs")]: {
-      width: "40px"
-    },
-    "& > *": {
-      height: "14px",
-      backgroundColor: "white",
-      [breakpoints.down("xs")]: {
-        height: "6px"
-      }
-    },
-    "& > * + *": {
-      marginTop: spacing(0.6),
-      [breakpoints.down("xs")]: {
-        marginTop: spacing(0.5)
-      }
-    }
-  },
-  sideNav: {
-    position: "fixed",
-    zIndex: 1,
-    width: "100%",
-    height: "100%",
-    top: 0,
-    left: 0,
-    backgroundImage: "url('/img/background_sidenav.jpg')",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    transform: "translateX(100%)",
-    transition: "transform 500ms",
-    "&.is-visible": {
-      transform: "translateX(0)"
-    }
-  },
-  closeButton: {
-    fill: "white",
-    width: "60px",
-    [breakpoints.down("xs")]: {
-      width: "30px"
-    }
-  },
-  sideNavTop: {
-    display: "flex",
-    justifyContent: "space-between",
-    paddingTop: spacing(2),
-    paddingRight: spacing(2),
-    paddingLeft: spacing(2),
-    [breakpoints.down("xs")]: {
-      paddingTop: spacing(1),
-      paddingRight: spacing(2),
-      paddingLeft: spacing(2)
-    }
-  },
-  linksContainer: {
-    display: "flex",
-    justifyContent: "center",
-    paddingTop: spacing(4),
-    textAlign: "center",
-    [breakpoints.down("xs")]: {
-      paddingTop: spacing(2)
-    },
-    "& a": {
-      display: "block",
-      color: "white",
-      fontSize: "2rem",
-      textDecoration: "none",
-      fontWeight: "bold",
-      [breakpoints.down("xs")]: {
-        fontSize: "1.5rem"
-      }
-    },
-    "& li + li": {
-      marginTop: spacing(4),
-      [breakpoints.down("xs")]: {
-        marginTop: spacing(2)
-      }
-    }
-  }
-}));
-
-const NavTabletMobile = () => {
-  const classes = useStyles();
+const NavTabletMobile = ({ handleChange }) => {
   const [isSideNavVisible, setIsSideNavVisible] = React.useState(false);
 
   const handleClickHamburger = () => {
@@ -110,72 +12,66 @@ const NavTabletMobile = () => {
     setIsSideNavVisible(false);
   };
 
+  const intl = useIntl();
+  let currentLanguage = intl.locale;
+
   return (
-    <div>
-      <div className={classes.root}>
-        <div>
-          <Link to="/index">
-            <img
-              className={classes.logo}
-              src="/img/logo.png"
-              alt="logo-praximis"
-            />
-          </Link>
+    <div className="mobileNavContainer">
+        <div className="menuHamburger" onClick={handleClickHamburger}>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <div>
-          <div className={classes.hamburger} onClick={handleClickHamburger}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-      </div>
       <div
-        className={`${classes.sideNav} ${isSideNavVisible ? "is-visible" : ""}`}
+        className={`${isSideNavVisible ? "mobileNav mobileNavVisible" : "mobileNav"}`}
       >
-        <div className={classes.sideNavTop}>
-          <Link to="/index">
-            <img
-              className={classes.logo}
-              src="/img/logo.png"
-              alt="logo-praximis"
-            />
-          </Link>
+        <div className="mobileNavTop">
           <svg
             onClick={handleClickCloseSidenav}
-            className={classes.closeButton}
+            className="mobileNavCloseButton"
             viewBox="0 0 386.667 386.667"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z" />
           </svg>
         </div>
-        <div className={classes.linksContainer}>
-          <ul>
-            <li>
-              <Link to="/index">
-                à propos
-              </Link>
-            </li>
-            <li>
-              <Link to="/index">
-                portfolio
-              </Link>
-            </li>
-            <li>
-              <Link to="/index">
-                nos services
-              </Link>
-            </li>
-            <li>
-              <Link to="/index">
-                nous contacter
-              </Link>
-            </li>
-            <li>
-              {/*<LanguageSwitcher />*/}
-            </li>
-          </ul>
+        <div className="mobileNavLinksContainer">
+          <Link to="/services/"
+            state={{ language: intl.locale }}
+            className="headerNavLink">
+            <FormattedMessage id="services.title" />
+          </Link>
+          <Link to="/about/"
+            state={{ language: intl.locale }}
+            className="headerNavLink">
+            <FormattedMessage id="about.title" />
+          </Link>
+          <Link to="/contact/"
+            state={{ language: intl.locale }}
+            className="headerNavLink">
+            <FormattedMessage id="contact.title" />
+          </Link>
+          <div>
+            <a
+              className={
+                currentLanguage === "fr" ? "headerNavLink headerNavLinkActive" : "headerNavLink"
+              }
+              onClick={handleChange}
+              name={"fr"}
+            >
+              FR
+            </a>
+            <span className="headerNavLinkSeparator">/</span>
+            <a
+              className={
+                currentLanguage === "en" ? "headerNavLink headerNavLinkActive" : "headerNavLink"
+              }
+              onClick={handleChange}
+              name={"en"}
+            >
+              EN
+            </a>
+          </div>
         </div>
       </div>
     </div>
