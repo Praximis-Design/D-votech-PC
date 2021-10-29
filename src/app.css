@@ -28,6 +28,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  box-sizing: border-box
 }
 
 
@@ -91,10 +92,6 @@ th:not([align]) {
 
 .MuiGrid-container {
   width: 100% !important;
-}
-
-#categoryComboBox{
-  background-color: transparent;
 }
 
 /*------------------------------------------------------------------
@@ -503,10 +500,10 @@ th:not([align]) {
   }
 
 }
-
+/*
 @media (max-width: 1024px) and (orientation: landscape) {
   .headerTitleContainer {
-    background-size: 100%;
+    background-size: cover;
     background-position: top;
   }
-}
+}*/

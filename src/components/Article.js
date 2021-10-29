@@ -5,7 +5,7 @@ import { useTheme } from "@material-ui/styles";
 
 const Article = ({ text, imageUrl, isReversed, title }) => {
   
-  const isXsDown = useMediaQuery("(max-width: 600px) and (orientation: portrait)", {
+  const isXsDown = useMediaQuery("(max-width: 1024px) and (orientation: portrait)", {
     defaultMatches: true
   });
   let direction = isReversed ? "row-reverse" : "row";
