@@ -37,7 +37,7 @@ const ServicesPage = ({ location }) => {
 
   const [locale, setLocale] = useState("en")
 
-  const isXsDown = useMediaQuery("(max-width: 1024px) and (orientation: portrait)");
+  const isXsDown = useMediaQuery("only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3)");
 
   return (
     <>
