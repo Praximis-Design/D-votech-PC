@@ -36,9 +36,7 @@ const AboutPage = ({ location }) => {
 
   let HeaderBackground = HeaderBackgroundDesktop;
 
-  const isXsDown = useMediaQuery("only screen and (max-device-width: 1024px) and (orientation: portrait)", {
-    defaultMatches: true
-  });
+  const isXsDown = useMediaQuery("only screen and (max-device-width: 1024px) and (orientation: portrait)");
 
   if (isXsDown) {
     HeaderBackground = HeaderBackgroundPhone;
