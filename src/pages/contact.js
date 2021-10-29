@@ -33,7 +33,7 @@ const ContactPage = ({ location }) => {
 
   const [locale, setLocale] = useState("en")
 
-  const isXsDown = useMediaQuery("(max-width: 1024px)");
+  const isXsDown = useMediaQuery("(max-width: 1024px) and (orientation: portrait)");
 
   return (
     <>
