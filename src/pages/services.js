@@ -39,7 +39,7 @@ const ServicesPage = ({ location }) => {
 
   let HeaderBackground = HeaderBackgroundDesktop;
 
-  const isXsDown = useMediaQuery("(max-width: 600px) and (orientation: portrait)", {
+  const isXsDown = useMediaQuery("only screen and (max-device-width: 768px) and (orientation: portrait)", {
     defaultMatches: true
   });
 
