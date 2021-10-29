@@ -255,11 +255,14 @@ th:not([align]) {
 
 .headerTitleContainer {
   height: 100vh;
-  max-width: 100%;
+  width: 100%;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+
 }
 
 .headerNavLinkSeparator {
@@ -416,7 +419,7 @@ th:not([align]) {
   }
 
   .headerTitleContainer {
-    background-size: 100%;
+    
   }
 
   .headerNavLink {
