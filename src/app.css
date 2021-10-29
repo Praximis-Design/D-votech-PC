@@ -254,7 +254,7 @@ th:not([align]) {
 }
 
 .headerTitleContainer {
-  height: 100vh;
+  height: 200px;
   max-width: 100%;
   background-size: cover;
   background-position: center;
