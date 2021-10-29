@@ -503,3 +503,10 @@ th:not([align]) {
   }
 
 }
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .headerTitleContainer {
+    background-size: 100%;
+    background-position: top;
+  }
+}
