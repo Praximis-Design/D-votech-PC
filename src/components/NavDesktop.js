@@ -24,13 +24,14 @@ const useStyles = makeStyles(({ spacing, customStyles }) => ({
   },
   rightLinksContainer: {
     position: "absolute",
-    right: "5%"
+    right: "10%"
   },
   navbarContainer: {
-    position: "relative",
+    position: "absolute",
     width: "100%",
     display: "flex",
-    paddingTop: "5rem",
+    top: "10%",
+    zIndex: 1,
     justifyContent: "center",
     alignItems: "center",
     "& a": {
