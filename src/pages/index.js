@@ -21,8 +21,6 @@ import "../app.css";
 
 const IndexPage = ({ location }) => {
 
-  let HeaderBackground = HeaderBackgroundDesktop;
-
   const handleChange = (e) => {
     setLocale(e.target.name);
   };
@@ -35,18 +33,14 @@ const IndexPage = ({ location }) => {
 
   const [locale, setLocale] = useState("en")
 
-  const isXsDown = useMediaQuery("only screen and (max-device-width: 1024px) and (orientation: portrait)");
-
-  if (isXsDown) {
-    HeaderBackground = HeaderBackgroundPhone;
-  }
+  const isXsDown = useMediaQuery("(max-width: 600px) and (orientation: portrait)");
 
   return (
     <>
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="homepage.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={HeaderBackground}>
+          backgroundImageUrl={isXsDown ? HeaderBackgroundPhone : HeaderBackgroundDesktop}>
           <Section>
             <Container maxWidth="lg">
               <Grid item xs={12}>

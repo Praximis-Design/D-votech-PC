@@ -33,20 +33,14 @@ const ContactPage = ({ location }) => {
 
   const [locale, setLocale] = useState("en")
 
-  let HeaderBackground = HeaderBackgroundDesktop;
-
-  const isXsDown = useMediaQuery("only screen and (max-device-width: 1024px) and (orientation: portrait)");
-
-  if (isXsDown) {
-    HeaderBackground = HeaderBackgroundPhone;
-  }
+  const isXsDown = useMediaQuery("(max-width: 600px) and (orientation: portrait)");
 
   return (
     <>
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="contact.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={HeaderBackground}>
+          backgroundImageUrl={isXsDown ? HeaderBackgroundPhone : HeaderBackgroundDesktop}>
           <Section>
             <Container maxWidth="lg">
 
