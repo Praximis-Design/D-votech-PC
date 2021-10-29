@@ -308,8 +308,9 @@ th:not([align]) {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 20%;
-  padding-right: 15%;
+  position: absolute;
+  top: 10%;
+  right: 15%;
 }
 
 .mobileNav {
