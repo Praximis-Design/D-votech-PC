@@ -15,7 +15,7 @@ const Article = ({ text, imageUrl, isReversed, title }) => {
   }
 
   return (
-    <div>
+    <div className="articleComponent">
       <Grid container alignItems={alignItems} direction={direction}>
         <Grid item sm={imageUrl ? 6 : 12}>
           <div className={imageUrl && isReversed ? "articleTextWrapperRight" : "articleTextWrapperLeft"}>

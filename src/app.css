@@ -102,6 +102,26 @@ th:not([align]) {
   padding: 5em;
 }
 
+.articleAnimationRight {
+  animation-name: articleAnimationRight;
+  animation-duration: 2s;
+}
+
+.articleAnimationLeft {
+  animation-name: articleAnimationLeft;
+  animation-duration: 2s;
+}
+
+@keyframes articleAnimationRight {
+  from {transform: translateX(100%); opacity: 0;}
+  to {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes articleAnimationLeft {
+  from {transform: translateX(-100%); opacity: 0;}
+  to {transform: translateX(0); opacity: 1;}
+}
+
 /*------------------------------------------------------------------
 == Article Component
 ------------------------------------------------------------------*/
@@ -235,10 +255,22 @@ th:not([align]) {
   font-weight: 900;
   color: white;
   cursor: pointer;
+  position: relative;
 }
 
-.headerNavLink:hover {
-  text-decoration: underline;
+.headerNavLink:after {
+  border-radius: 1em;
+  border-top: .1em solid white;
+  content: "";
+  position: absolute;
+    right: 100%;
+    bottom: .1em;
+    left: 0;
+  transition: right .4s;
+}
+
+.headerNavLink:hover:after {
+  right: 0;
 }
 
 .headerTopRightElement {

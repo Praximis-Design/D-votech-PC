@@ -28,6 +28,40 @@ const AboutPage = ({ location }) => {
     if (location.state != null) {
       setLocale(location.state.language)
     }
+
+    const articles = document.querySelectorAll('.articleComponent');
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {            
+
+        let index = 0;
+
+        for(var i = 0; i < articles.length; i++){
+          if(articles[i] == entry.target) {
+            index = i;
+          }
+        }
+
+        if (entry.isIntersecting) {
+          if(index % 2 == 0)
+          {
+            entry.target.classList.add('articleAnimationRight');
+          }
+          else
+          {
+            entry.target.classList.add('articleAnimationLeft');
+          }
+          return;
+        }
+  
+        entry.target.classList.remove('articleAnimationRight');
+        entry.target.classList.remove('articleAnimationLeft');
+      });
+    });
+    
+    articles.forEach(a => {
+      observer.observe(a);
+    }) 
   }, []);
 
   const [locale, setLocale] = useState("en")
@@ -51,7 +85,7 @@ const AboutPage = ({ location }) => {
         <DefaultLayout title={<FormattedMessage id="about.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
           backgroundImageUrl={headerBackground}>
-          <Section>
+          <Section style={{overflow: "hidden"}}>
             <Container maxWidth="lg">
 
               <Section>

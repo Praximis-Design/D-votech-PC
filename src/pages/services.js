@@ -32,22 +32,57 @@ const ServicesPage = ({ location }) => {
     {
       setLocale(location.state.language)
     }
-}, []);
+
+    const articles = document.querySelectorAll('.articleComponent');
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {            
+
+        let index = 0;
+
+        for(var i = 0; i < articles.length; i++){
+          if(articles[i] == entry.target) {
+            index = i;
+          }
+        }
+
+        if (entry.isIntersecting) {
+          if(index % 2 == 0)
+          {
+            entry.target.classList.add('articleAnimationRight');
+          }
+          else
+          {
+            entry.target.classList.add('articleAnimationLeft');
+          }
+          return;
+        }
+  
+        entry.target.classList.remove('articleAnimationRight');
+        entry.target.classList.remove('articleAnimationLeft');
+      });
+    });
+    
+    articles.forEach(a => {
+      observer.observe(a);
+    }) 
+
+  }, []);
 
   const [locale, setLocale] = useState("en")
 
-    // Gestion de l'image de fond pour le header
-    let headerBackground = HeaderBackgroundDesktop;
+  // Gestion de l'image de fond pour le header
+  let headerBackground = HeaderBackgroundDesktop;
 
-    const isTablet = useMediaQuery("(max-width: 1366px) and (min-width: 601px)");
-    const isPhone = useMediaQuery("(max-width: 600px)");
-  
-    if (isTablet) {
-      headerBackground = HeaderBackgroundTablet;
-    }
-    else {
-      headerBackground = isPhone ? HeaderBackgroundPhone : HeaderBackgroundDesktop;
-    }
+  const isTablet = useMediaQuery("(max-width: 1366px) and (min-width: 601px)");
+  const isPhone = useMediaQuery("(max-width: 600px)");
+
+  if (isTablet) {
+    headerBackground = HeaderBackgroundTablet;
+  }
+  else {
+    headerBackground = isPhone ? HeaderBackgroundPhone : HeaderBackgroundDesktop;
+  }
 
   return (
     <>
@@ -55,7 +90,7 @@ const ServicesPage = ({ location }) => {
       <DefaultLayout title={<FormattedMessage id="services.title" values={{ br: <br></br> }} />}
         handleChange={handleChange}
         backgroundImageUrl={headerBackground}>
-          <Section>
+          <Section style={{overflow: "hidden"}}>
             <Container maxWidth="lg">
               <Section>
               <Grid item xs={12}>

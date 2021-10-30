@@ -1,8 +1,8 @@
 import React from "react";
 
-const Section = ({ children }) => {
+const Section = ({ style, children }) => {
   
-  return <div className={"sectionWrapper"}>{children}</div>;
+  return <div style={style} className={"sectionWrapper"}>{children}</div>;
 };
 
 export default Section;
