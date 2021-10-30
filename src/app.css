@@ -567,6 +567,7 @@ th:not([align]) {
     width: 70%;
     font-size: 12px;
     line-height: 17px;
+    margin: auto;
   }
 
   .contactTextArea {
