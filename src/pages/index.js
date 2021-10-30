@@ -34,13 +34,16 @@ const IndexPage = ({ location }) => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {       
         if (entry.isIntersecting) {
-          if(entry.target.className.includes("articleRight"))
+          if(entry.target.className.includes("articleRight") && !entry.target.className.includes("articleAnimationDone"))
           {
             entry.target.classList.add('articleAnimationRight');
+            entry.target.classList.add('articleAnimationDone');
           }
-          else
+
+          if(entry.target.className.includes("articleLeft") && !entry.target.className.includes("articleAnimationDone"))
           {
             entry.target.classList.add('articleAnimationLeft');
+            entry.target.classList.add('articleAnimationDone');
           }
           return;
         }
