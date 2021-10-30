@@ -54,19 +54,15 @@ const ContactPage = ({ location }) => {
           handleChange={handleChange}
           backgroundImageUrl={headerBackground}>
           <Section>
-            <Container maxWidth="lg">
-
               <Section>
-                <Grid item xs={12} className="contactMoreInfo">
+                <div className="contactMoreInfo">
                     <FormattedMessage id="contact.moreInfoDescription" />
-                </Grid>
+                </div>
               </Section>
 
               <Section>
                 <ContactForm></ContactForm>
               </Section>
-
-            </Container>
           </Section>
         </DefaultLayout>
       </StaticIntlProvider>

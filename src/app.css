@@ -557,17 +557,13 @@ th:not([align]) {
   }
 
   .sectionWrapper {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding: 3em;
   }
 
   .contactMoreInfo {
     width: 70%;
     font-size: 12px;
     line-height: 17px;
-    margin: auto;
   }
 
   .contactTextArea {
