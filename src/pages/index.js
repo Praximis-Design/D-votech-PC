@@ -34,7 +34,7 @@ const IndexPage = ({ location }) => {
   // Gestion de l'image de fond pour le header
   let headerBackground = HeaderBackgroundDesktop;
 
-  const isTablet = useMediaQuery("(max-width: 1024px) and (min-width: 601px)");
+  const isTablet = useMediaQuery("(max-width: 1366px) and (min-width: 601px)");
   const isPhone = useMediaQuery("(max-width: 600px)");
 
   if (isTablet) {

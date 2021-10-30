@@ -5,7 +5,7 @@ import { useMediaQuery } from "@material-ui/core";
 
 const Header = ({ title, backgroundImageUrl, handleChange }) => {
 
-  const isTabletOrPhone = useMediaQuery("(max-width: 1024px)");
+  const isTabletOrPhone = useMediaQuery("(max-width: 1366px)");
 
   return (
     <div id="header">
