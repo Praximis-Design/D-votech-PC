@@ -29,21 +29,13 @@ const AboutPage = ({ location }) => {
       setLocale(location.state.language)
     }
 
-    const articles = document.querySelectorAll('.articleComponent');
+    const articlesLeft = document.querySelectorAll('.articleLeft');
+    const articlesRight = document.querySelectorAll('.articleRight');
   
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {            
-
-        let index = 0;
-
-        for(var i = 0; i < articles.length; i++){
-          if(articles[i] == entry.target) {
-            index = i;
-          }
-        }
-
+      entries.forEach(entry => {       
         if (entry.isIntersecting) {
-          if(index % 2 == 0)
+          if(entry.target.className.includes("articleRight"))
           {
             entry.target.classList.add('articleAnimationRight');
           }
@@ -59,7 +51,11 @@ const AboutPage = ({ location }) => {
       });
     });
     
-    articles.forEach(a => {
+    articlesLeft.forEach(a => {
+      observer.observe(a);
+    }) 
+
+    articlesRight.forEach(a => {
       observer.observe(a);
     }) 
   }, []);

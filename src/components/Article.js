@@ -18,13 +18,13 @@ const Article = ({ text, imageUrl, isReversed, title }) => {
     <div className="articleComponent">
       <Grid container alignItems={alignItems} direction={direction}>
         <Grid item sm={imageUrl ? 6 : 12}>
-          <div className={imageUrl && isReversed ? "articleTextWrapperRight" : "articleTextWrapperLeft"}>
+          <div className={imageUrl && isReversed ? "articleTextWrapperRight articleRight" : "articleTextWrapperLeft articleLeft"}>
             <h6 className="articleTextWrapperTitle">{title}</h6>
             {text}
           </div>
         </Grid>
         {imageUrl && (
-          <Grid item container alignItems="center" sm={6}>
+          <Grid item container alignItems="center" sm={6} className={isReversed ? "articleLeft" : "articleRight"}>
             <img src={imageUrl} />
           </Grid>
         )}
