@@ -1,11 +1,10 @@
 import React from "react";
-import { Grid, makeStyles, useMediaQuery } from "@material-ui/core";
-import { useTheme } from "@material-ui/styles";
+import { Grid, useMediaQuery } from "@material-ui/core";
 
 
 const Article = ({ text, imageUrl, isReversed, title }) => {
   
-  const isXsDown = useMediaQuery("(max-width: 1024px) and (orientation: portrait)", {
+  const isXsDown = useMediaQuery("(max-width: 600px)", {
     defaultMatches: true
   });
   let direction = isReversed ? "row-reverse" : "row";

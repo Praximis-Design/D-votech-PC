@@ -6,15 +6,13 @@ import StaticIntlProvider from "../components/StaticIntlProvider";
 import {
   Container,
   Grid,
-  Button,
-  useMediaQuery,
-  makeStyles,
-  Fade
+  useMediaQuery
 } from "@material-ui/core";
 import Article from "../components/Article";
 import Section from "../components/Section";
 import HeaderBackgroundDesktop from "../images/a_propos_Desktop.jpg"
 import HeaderBackgroundPhone from "../images/à_propos_iPhone.jpg"
+import HeaderBackgroundTablet from "../images/à_propos_iPad.jpg"
 import CustomImage from "../images/a_propos_desktop3.jpg"
 import DeliveryImage from "../images/a_propos_desktop2.jpg"
 import "../app.css";
@@ -33,31 +31,38 @@ const AboutPage = ({ location }) => {
   }, []);
 
   const [locale, setLocale] = useState("en")
+  
+  // Gestion de l'image de fond pour le header
+  let headerBackground = HeaderBackgroundDesktop;
 
-  const isXsDown = useMediaQuery("(max-width: 1024px) and (orientation: portrait)");
+  const isTablet = useMediaQuery("(max-width: 1024px) and (min-width: 601px)");
+  const isPhone = useMediaQuery("(max-width: 600px)");
+
+  if (isTablet) {
+    headerBackground = HeaderBackgroundTablet;
+  }
+  else {
+    headerBackground = isPhone ? HeaderBackgroundPhone : HeaderBackgroundDesktop;
+  }
 
   return (
     <>
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="about.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={isXsDown ? HeaderBackgroundPhone : HeaderBackgroundDesktop}>
+          backgroundImageUrl={headerBackground}>
           <Section>
             <Container maxWidth="lg">
 
               <Section>
                 <Grid item xs={12}>
-                  <Fade>
                     <Article text={<FormattedMessage id="about.customerServiceDescription" />} imageUrl={CustomImage} isReversed={true}></Article>
-                  </Fade>
                 </Grid>
               </Section>
 
               <Section>
                 <Grid item xs={12}>
-                  <Fade>
                     <Article text={<FormattedMessage id="about.homeServiceDescription" />} imageUrl={DeliveryImage} isReversed={false}></Article>
-                  </Fade>
                 </Grid>
               </Section>
 

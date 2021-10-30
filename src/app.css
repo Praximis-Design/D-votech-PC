@@ -209,7 +209,6 @@ th:not([align]) {
 ------------------------------------------------------------------*/
 
 #header {
-  /*background-image: url(../src/images/background_header_homepage.jpg);*/
   position: relative;
   height: 100vh;
 }
@@ -345,7 +344,6 @@ th:not([align]) {
 ------------------------------------------------------------------*/
 
 #footer {
-  /*background-image: url(../src/images/background_footer.jpg);*/
   background-color: #000067;
   display: flex;
   flex-direction: column;
@@ -408,7 +406,7 @@ th:not([align]) {
 == For Smart phone
 -------------------------------------------------------------------------------*/
 
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
 
   .headerTitle {
     font-size: 20px;
@@ -499,12 +497,94 @@ th:not([align]) {
     padding-left: 34px;
     padding-right: 34px;
   }
+}
+
+/*------------------------------------------------------------------------------
+== For Tablet
+-------------------------------------------------------------------------------*/
+
+@media (max-width: 1024px) and (min-width: 601px) {
+
+  .headerTitle {
+    font-size: 30px;
+    line-height: 45px;
+    width: 80%;
+  }
+
+  .headerTitleContainer {
+    background-size: 100% 100vh;
+    background-position: right;
+  }
+
+  .headerNavLink {
+    font-size: 30px;
+  }
+
+  .mobileNavCloseButton {
+    width: 40px;
+  }
+
+  .footerTitle {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .footerLogoContainer {
+    min-width: 6em;
+    min-height: 7em;
+  }
+
+  .footerLogoLink {
+    font-size: 14px;
+  }
+
+  .footerCopyrights {
+    font-size: 12px;
+  }
+
+  #footer {
+    height: 380px;
+  }
+  
+  .articleTextWrapperRight, .articleTextWrapperLeft {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  
+  .articleTextWrapperTitle {
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .sectionWrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  .contactMoreInfo {
+    width: 70%;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .contactTextArea {
+    margin-bottom: 3em;
+    font-size: 14px;
+    border-radius: 34px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .contactTextField {
+    font-size: 14px;
+    height: 43px;
+    border-radius: 34px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
 
 }
-/*
-@media (max-width: 1024px) and (orientation: landscape) {
-  .headerTitleContainer {
-    background-size: cover;
-    background-position: top;
-  }
-}*/

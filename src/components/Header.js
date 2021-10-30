@@ -1,18 +1,20 @@
 import React from "react";
 import NavDesktop from "./NavDesktop";
 import NavTabletMobile from "./NavTabletMobile";
-import { Hidden } from "@material-ui/core";
+import { useMediaQuery } from "@material-ui/core";
 
 const Header = ({ title, backgroundImageUrl, handleChange }) => {
 
+  const isTabletOrPhone = useMediaQuery("(max-width: 1024px)");
+
   return (
     <div id="header">
-      <Hidden smDown>
+      {!isTabletOrPhone && (
         <NavDesktop handleChange={handleChange}/>
-      </Hidden>
-      <Hidden mdUp>
+      )}
+      {isTabletOrPhone &&(
         <NavTabletMobile handleChange={handleChange}/>
-      </Hidden>
+      )}        
       <div className={"headerTitleContainer"} style={{backgroundImage: "url(" + backgroundImageUrl + ")"}}>
         <h1 className={"headerTitle"}>{title}</h1>
       </div>

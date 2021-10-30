@@ -6,15 +6,14 @@ import StaticIntlProvider from "../components/StaticIntlProvider";
 import {
   Container,
   Grid,
-  Button,
   useMediaQuery,
-  makeStyles,
   Fade
 } from "@material-ui/core";
 import Article from "../components/Article";
 import Section from "../components/Section";
 import HeaderBackgroundDesktop from "../images/services_Desktop.jpg"
 import HeaderBackgroundPhone from "../images/services_iPhone.jpg"
+import HeaderBackgroundTablet from "../images/services_iPad.jpg"
 import RepairImage from "../images/services_Desktop2.jpg"
 import ConfigImage from "../images/services_desktop3.jpg"
 import ModifImage from "../images/services_desktop4.jpg"
@@ -37,14 +36,25 @@ const ServicesPage = ({ location }) => {
 
   const [locale, setLocale] = useState("en")
 
-  const isXsDown = useMediaQuery("(max-width: 1024px) and (orientation: portrait)");
+    // Gestion de l'image de fond pour le header
+    let headerBackground = HeaderBackgroundDesktop;
+
+    const isTablet = useMediaQuery("(max-width: 1024px) and (min-width: 601px)");
+    const isPhone = useMediaQuery("(max-width: 600px)");
+  
+    if (isTablet) {
+      headerBackground = HeaderBackgroundTablet;
+    }
+    else {
+      headerBackground = isPhone ? HeaderBackgroundPhone : HeaderBackgroundDesktop;
+    }
 
   return (
     <>
     <StaticIntlProvider locale={locale} >
       <DefaultLayout title={<FormattedMessage id="services.title" values={{ br: <br></br> }} />}
         handleChange={handleChange}
-        backgroundImageUrl={isXsDown ? HeaderBackgroundPhone : HeaderBackgroundDesktop}>
+        backgroundImageUrl={headerBackground}>
           <Section>
             <Container maxWidth="lg">
               <Section>
