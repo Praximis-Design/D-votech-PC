@@ -56,7 +56,7 @@ const ContactPage = ({ location }) => {
           <Section>
               <Section>
                 <div className="contactMoreInfo">
-                    <FormattedMessage id="contact.moreInfoDescription" />
+                    <FormattedMessage id="contact.moreInfoDescription" values={{ br: <br></br> }} />
                 </div>
               </Section>
 
