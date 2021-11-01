@@ -14,7 +14,7 @@ import Section from "../components/Section";
 import HeaderBackgroundDesktop from "../images/accueil_Desktop.jpg";
 import HeaderBackgroundPhone from "../images/accueil_iPhone.jpg";
 import HeaderBackgroundTablet from "../images/accueil_iPad.jpg";
-import HomepageMission from "../images/accueil_desktop2.jpg";
+import HomepageMission from "../images/accueil_desktop2_small.jpg";
 import "../app.css";
 
 const IndexPage = ({ location }) => {
@@ -27,39 +27,6 @@ const IndexPage = ({ location }) => {
     if (location.state != null) {
       setLocale(location.state.language)
     }
-
-    const articlesLeft = document.querySelectorAll('.articleLeft');
-    const articlesRight = document.querySelectorAll('.articleRight');
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {       
-        if (entry.isIntersecting) {
-          if(entry.target.className.includes("articleRight") && !entry.target.className.includes("articleAnimationDone"))
-          {
-            entry.target.classList.add('articleAnimationRight');
-            entry.target.classList.add('articleAnimationDone');
-          }
-
-          if(entry.target.className.includes("articleLeft") && !entry.target.className.includes("articleAnimationDone"))
-          {
-            entry.target.classList.add('articleAnimationLeft');
-            entry.target.classList.add('articleAnimationDone');
-          }
-          return;
-        }
-  
-        entry.target.classList.remove('articleAnimationRight');
-        entry.target.classList.remove('articleAnimationLeft');
-      });
-    });
-    
-    articlesLeft.forEach(a => {
-      observer.observe(a);
-    }) 
-
-    articlesRight.forEach(a => {
-      observer.observe(a);
-    }) 
   }, []);
 
   const [locale, setLocale] = useState("en")

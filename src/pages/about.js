@@ -13,8 +13,8 @@ import Section from "../components/Section";
 import HeaderBackgroundDesktop from "../images/a_propos_Desktop.jpg"
 import HeaderBackgroundPhone from "../images/à_propos_iPhone.jpg"
 import HeaderBackgroundTablet from "../images/à_propos_iPad.jpg"
-import CustomImage from "../images/a_propos_desktop3.jpg"
-import DeliveryImage from "../images/a_propos_desktop2.jpg"
+import CustomImage from "../images/a_propos_desktop3_small.jpg"
+import DeliveryImage from "../images/a_propos_desktop2_small.jpg"
 import "../app.css";
 
 // markup
@@ -28,39 +28,6 @@ const AboutPage = ({ location }) => {
     if (location.state != null) {
       setLocale(location.state.language)
     }
-
-    const articlesLeft = document.querySelectorAll('.articleLeft');
-    const articlesRight = document.querySelectorAll('.articleRight');
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {       
-        if (entry.isIntersecting) {
-          if(entry.target.className.includes("articleRight") && !entry.target.className.includes("articleAnimationDone"))
-          {
-            entry.target.classList.add('articleAnimationRight');
-            entry.target.classList.add('articleAnimationDone');
-          }
-
-          if(entry.target.className.includes("articleLeft") && !entry.target.className.includes("articleAnimationDone"))
-          {
-            entry.target.classList.add('articleAnimationLeft');
-            entry.target.classList.add('articleAnimationDone');
-          }
-          return;
-        }
-  
-        entry.target.classList.remove('articleAnimationRight');
-        entry.target.classList.remove('articleAnimationLeft');
-      });
-    });
-    
-    articlesLeft.forEach(a => {
-      observer.observe(a);
-    }) 
-
-    articlesRight.forEach(a => {
-      observer.observe(a);
-    }) 
   }, []);
 
   const [locale, setLocale] = useState("en")

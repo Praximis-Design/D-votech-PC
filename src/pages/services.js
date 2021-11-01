@@ -14,10 +14,10 @@ import Section from "../components/Section";
 import HeaderBackgroundDesktop from "../images/services_Desktop.jpg"
 import HeaderBackgroundPhone from "../images/services_iPhone.jpg"
 import HeaderBackgroundTablet from "../images/services_iPad.jpg"
-import RepairImage from "../images/services_Desktop2.jpg"
-import ConfigImage from "../images/services_desktop3.jpg"
-import ModifImage from "../images/services_desktop4.jpg"
-import DeliveryImage from "../images/services_desktop5.jpg"
+import RepairImage from "../images/services_Desktop2_small.jpg"
+import ConfigImage from "../images/services_desktop3_small.jpg"
+import DeliveryImage from "../images/services_desktop4_small.jpg"
+import ModifImage from "../images/services_desktop5_small.jpg"
 import "../app.css";
 
 // markup
@@ -32,40 +32,6 @@ const ServicesPage = ({ location }) => {
     {
       setLocale(location.state.language)
     }
-
-    const articlesLeft = document.querySelectorAll('.articleLeft');
-    const articlesRight = document.querySelectorAll('.articleRight');
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {       
-        if (entry.isIntersecting) {
-          if(entry.target.className.includes("articleRight") && !entry.target.className.includes("articleAnimationDone"))
-          {
-            entry.target.classList.add('articleAnimationRight');
-            entry.target.classList.add('articleAnimationDone');
-          }
-
-          if(entry.target.className.includes("articleLeft") && !entry.target.className.includes("articleAnimationDone"))
-          {
-            entry.target.classList.add('articleAnimationLeft');
-            entry.target.classList.add('articleAnimationDone');
-          }
-          return;
-        }
-  
-        entry.target.classList.remove('articleAnimationRight');
-        entry.target.classList.remove('articleAnimationLeft');
-      });
-    });
-    
-    articlesLeft.forEach(a => {
-      observer.observe(a);
-    }) 
-
-    articlesRight.forEach(a => {
-      observer.observe(a);
-    }) 
-
   }, []);
 
   const [locale, setLocale] = useState("en")
@@ -106,19 +72,19 @@ const ServicesPage = ({ location }) => {
                 </Fade>
               </Grid>
               </Section>
+
+              <Section>
+                <Grid item xs={12}>
+                  <Fade>
+                    <Article title={<FormattedMessage id="services.homeDeliveryTitle" />} text={<FormattedMessage id="services.homeDeliveryDescription" />} imageUrl={DeliveryImage} isReversed={true}></Article>
+                  </Fade>
+                </Grid>
+              </Section>
               
               <Section>
               <Grid item xs={12}>
                 <Fade>
-                  <Article title={<FormattedMessage id="services.computerModifTitle" />} text={<FormattedMessage id="services.computerModifDescription" />} imageUrl={ModifImage} isReversed={true}></Article>
-                </Fade>
-              </Grid>
-              </Section>
-
-              <Section>
-              <Grid item xs={12}>
-                <Fade>
-                  <Article title={<FormattedMessage id="services.homeDeliveryTitle" />} text={<FormattedMessage id="services.homeDeliveryDescription" />} imageUrl={DeliveryImage} isReversed={false}></Article>
+                  <Article title={<FormattedMessage id="services.computerModifTitle" />} text={<FormattedMessage id="services.computerModifDescription" />} imageUrl={ModifImage} isReversed={false}></Article>
                 </Fade>
               </Grid>
               </Section>
