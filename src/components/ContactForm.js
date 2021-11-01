@@ -31,9 +31,8 @@ class ContactForm extends React.Component {
     e.preventDefault();
 
     // Lien avec le template emailjs
-    // Pour tester : template_05o8pco
-    // Pour Live : template_a3gk8a5
-    emailjs.sendForm('Devotech Form', 'template_05o8pco', e.target, 'user_Eu8hJ5gCxt8agTbbnCae5')
+    // Pour Live : template_05o8pco
+    emailjs.sendForm('service_4kv57ms', 'template_05o8pco', e.target, 'user_Eu8hJ5gCxt8agTbbnCae5')
       .then((result) => {
         this.setState({
           hasSuccessMessage: true,
