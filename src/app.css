@@ -264,11 +264,11 @@ th:not([align]) {
 }
 
 .headerNavLink:after {
-  border-top: .1em solid white;
+  border-top: .15em solid white;
   content: "";
   position: absolute;
   right: 100%;
-  bottom: .1em;
+  bottom: -5px;
   left: 0;
   transition: right .4s;
 }
@@ -308,11 +308,11 @@ th:not([align]) {
 }
 
 .headerNavLinkActive:after {
-  border-top: .1em solid white;
+  border-top: .15em solid white;
   content: "";
   position: absolute;
   right: 100%;
-  bottom: .1em;
+  bottom: -5px;
   right: 0;
 }
 
