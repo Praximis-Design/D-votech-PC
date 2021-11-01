@@ -132,14 +132,14 @@ class ContactForm extends React.Component {
           </FormattedMessage>
 
           <Fade in={this.state.hasSuccessMessage} mountOnEnter unmountOnExit>
-            <Alert onClose={() => { this.setState({ hasSuccessMessage: false }); }} severity="success">
+            <Alert className="contactAlert" onClose={() => { this.setState({ hasSuccessMessage: false }); }} severity="success">
               <Typography variant="p" component="p" color="primary" >
                 <FormattedMessage id="contact.successMessage"></FormattedMessage>
               </Typography>
             </Alert>
           </Fade>
           <Fade in={this.state.hasErrorMessage} mountOnEnter unmountOnExit>
-            <Alert onClose={() => { this.setState({ hasErrorMessage: false }); }} severity="success">
+            <Alert className="contactAlert" onClose={() => { this.setState({ hasErrorMessage: false }); }} severity="success">
               <Typography variant="p" component="p" color="primary" >
                 <FormattedMessage id="contact.errorMessage"></FormattedMessage>
               </Typography>
