@@ -20,7 +20,7 @@ const Footer = () => {
         <div className={"footerLogoContainer"}>
           <a
             className={"footerLogoLink"}
-            href="https://www.facebook.com/praximisdesign"
+            href="https://www.facebook.com/devotechpc"
             target="_blank"
           >
             Facebook
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className={"footerLogoContainer"}>
           <a
             className={"footerLogoLink"}
-            href="https://www.instagram.com/praximisdesign"
+            href="https://www.instagram.com/devotechpc"
             target="_blank"
           >
             Instagram
@@ -38,7 +38,7 @@ const Footer = () => {
         <div className={"footerLogoContainer"}>
           <a
             className={"footerLogoLink"}
-            href="https://twitter.com/praximis"
+            href="https://twitter.com/DevotechPC"
             target="_blank"
           >
             Twitter
