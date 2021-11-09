@@ -365,9 +365,11 @@ th:not([align]) {
 
 .mobileNavTop {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   top: 10%;
   position: absolute;
+  padding-left: 10%;
+  padding-right: 10%;
   align-items: center;
   width: 100%;
 }
