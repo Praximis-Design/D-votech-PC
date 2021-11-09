@@ -265,6 +265,7 @@ th:not([align]) {
   color: white;
   cursor: pointer;
   position: relative;
+  margin-left: 5em;
 }
 
 .headerNavLink:after {
@@ -320,6 +321,19 @@ th:not([align]) {
   right: 0;
 }
 
+.headerNavContainer {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerLeftLinksContainer {
+  width: 20%;
+}
+
 .menuHamburger {
   display: flex;
   flex-direction: column;
@@ -354,7 +368,8 @@ th:not([align]) {
   align-items: flex-end;
   position: absolute;
   top: 10%;
-  right: 15%;
+  padding-right: 15%;
+  width: 100%;
 }
 
 .mobileNav {
@@ -464,8 +479,17 @@ th:not([align]) {
     background-position: top;
   }
 
+  .headerLeftLinksContainer {
+    width: 30%;
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+
   .headerNavLink {
     font-size: 18px;
+    margin-left: 0;
   }
 
   .mobileNavCloseButton {
@@ -561,8 +585,17 @@ th:not([align]) {
     background-position: top;
   }
 
+  .headerLeftLinksContainer {
+    width: 30%;
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+
   .headerNavLink {
     font-size: 30px;
+    margin-left: 0;
   }
 
   .mobileNavCloseButton {

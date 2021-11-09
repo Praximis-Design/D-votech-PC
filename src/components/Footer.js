@@ -2,9 +2,6 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FormattedMessage } from "react-intl";
-/*import FacebookLogo from "../images/logo_facebook.png"
-import InstagramLogo from "../images/logo_instagram.png"
-import TwitterLogo from "../images/logo_twitter.png"*/
 
 const Footer = () => {
   

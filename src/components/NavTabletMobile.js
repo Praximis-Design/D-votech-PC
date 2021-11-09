@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { useIntl, FormattedMessage } from "react-intl";
+import LogoDevotech from "../images/logo_blanc.png"
 
 const NavTabletMobile = ({ handleChange }) => {
   const [isSideNavVisible, setIsSideNavVisible] = React.useState(false);
@@ -17,6 +18,12 @@ const NavTabletMobile = ({ handleChange }) => {
 
   return (
     <div className="mobileNavContainer">
+        <div className="headerLeftLinksContainer">
+          <Link className="no-hover" to="/"
+            state={{ language: intl.locale }}>
+            <img src={LogoDevotech} alt="logo-Devotech" />
+          </Link>
+        </div>
         <div className="menuHamburger" onClick={handleClickHamburger}>
           <div></div>
           <div></div>
@@ -26,6 +33,13 @@ const NavTabletMobile = ({ handleChange }) => {
         className={`${isSideNavVisible ? "mobileNav mobileNavVisible" : "mobileNav"}`}
       >
         <div className="mobileNavTop">
+          <div className="headerLeftLinksContainer">
+            <Link className="no-hover" to="/"
+              state={{ language: intl.locale }}
+              onClick={handleClickCloseSidenav}>
+              <img src={LogoDevotech} alt="logo-Devotech" />
+            </Link>
+          </div>
           <svg
             onClick={handleClickCloseSidenav}
             className="mobileNavCloseButton"
@@ -38,20 +52,23 @@ const NavTabletMobile = ({ handleChange }) => {
         <div className="mobileNavLinksContainer">
           <Link to="/services/"
             state={{ language: intl.locale }}
-            className="headerNavLink">
+            className="headerNavLink"
+            onClick={handleClickCloseSidenav}>
             <FormattedMessage id="services.title" />
           </Link>
           <Link to="/about/"
             state={{ language: intl.locale }}
-            className="headerNavLink">
+            className="headerNavLink"
+            onClick={handleClickCloseSidenav}>
             <FormattedMessage id="about.title" />
           </Link>
           <Link to="/contact/"
             state={{ language: intl.locale }}
-            className="headerNavLink">
+            className="headerNavLink"
+            onClick={handleClickCloseSidenav}>
             <FormattedMessage id="contact.title" />
           </Link>
-          <div>
+          <div onClick={handleClickCloseSidenav}>
             <a
               className={
                 currentLanguage === "fr" ? "headerNavLink headerNavLinkActive" : "headerNavLink"
