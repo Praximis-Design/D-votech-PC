@@ -339,9 +339,6 @@ th:not([align]) {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  position: absolute;
-  right: 15%;
-  top: 5%;
   height: 60px;
   width: 60px;
   z-index: 1;
@@ -355,6 +352,10 @@ th:not([align]) {
 
 .mobileNavContainer {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 5%;
 }
 
 .mobileNavCloseButton {
@@ -364,11 +365,9 @@ th:not([align]) {
 
 .mobileNavTop {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: absolute;
+  justify-content: space-around;
   top: 10%;
-  padding-right: 15%;
+  position: absolute;
   width: 100%;
 }
 
@@ -480,11 +479,8 @@ th:not([align]) {
   }
 
   .headerLeftLinksContainer {
-    width: 30%;
+    width: 40%;
     z-index: 1;
-    position: absolute;
-    top: 10%;
-    left: 10%;
   }
 
   .headerNavLink {
@@ -588,9 +584,6 @@ th:not([align]) {
   .headerLeftLinksContainer {
     width: 30%;
     z-index: 1;
-    position: absolute;
-    top: 10%;
-    left: 10%;
   }
 
   .headerNavLink {
