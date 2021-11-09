@@ -368,6 +368,7 @@ th:not([align]) {
   justify-content: space-around;
   top: 10%;
   position: absolute;
+  align-items: center;
   width: 100%;
 }
 
