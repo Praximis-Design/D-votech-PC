@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid, useMediaQuery } from "@material-ui/core";
-import { useState, useEffect } from "react";
 
 
 const Article = ({ text, imageUrl, isReversed, title }) => {
@@ -16,7 +15,6 @@ const Article = ({ text, imageUrl, isReversed, title }) => {
   }
 
   const [isVisible, setVisible] = React.useState(false);
-  const [isAnimationDone, setAnimationDone] = React.useState(true);
   const domRef = React.useRef();
 
   React.useEffect(() => {
@@ -44,7 +42,7 @@ const Article = ({ text, imageUrl, isReversed, title }) => {
         {imageUrl && (
           <Grid ref={domRef} item container alignItems="center" sm={6} className={isReversed ? (isVisible ? "articleLeft articleAnimationLeft" : "articleLeft") : 
                                                                                                (isVisible ? "articleRight articleAnimationRight" : "articleRight")}>
-            <img src={imageUrl} />
+            <img src={imageUrl} alt="ArticleImage" />
           </Grid>
         )}
       </Grid>

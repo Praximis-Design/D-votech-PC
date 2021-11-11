@@ -1,9 +1,8 @@
 import React from "react";
-import { Grid, TextField, Button, Typography, Fade } from "@material-ui/core";
+import { Typography, Fade } from "@material-ui/core";
 import { Alert } from '@material-ui/lab';
 import { FormattedMessage } from "react-intl";
 import "../../node_modules/font-awesome/css/font-awesome.min.css";
-import Icon from '@material-ui/core/Icon';
 import emailjs from 'emailjs-com';
 
 // Auteur : Samuel Hénault
@@ -64,8 +63,6 @@ class ContactForm extends React.Component {
   }
 
   render() {
-    const customStyle = { marginBottom: "2rem" }
-
     return (
       <>
         <form onSubmit={this.sendEmail} className="contactForm">

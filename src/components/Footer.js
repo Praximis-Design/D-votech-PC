@@ -1,6 +1,4 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import { FormattedMessage } from "react-intl";
 
 const Footer = () => {
@@ -19,6 +17,7 @@ const Footer = () => {
             className={"footerLogoLink"}
             href="https://www.facebook.com/devotechpc"
             target="_blank"
+            rel="noreferrer"
           >
             Facebook
           </a>
@@ -28,6 +27,7 @@ const Footer = () => {
             className={"footerLogoLink"}
             href="https://www.instagram.com/devotechpc"
             target="_blank"
+            rel="noreferrer"
           >
             Instagram
           </a>
@@ -37,6 +37,7 @@ const Footer = () => {
             className={"footerLogoLink"}
             href="https://twitter.com/DevotechPC"
             target="_blank"
+            rel="noreferrer"
           >
             Twitter
           </a>

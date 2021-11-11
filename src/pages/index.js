@@ -7,8 +7,7 @@ import StaticIntlProvider from "../components/StaticIntlProvider";
 import {
   Container,
   Grid,
-  useMediaQuery,
-  Fade
+  useMediaQuery
 } from "@material-ui/core";
 import Section from "../components/Section";
 import HeaderBackgroundDesktop from "../images/accueil_Desktop.jpg";
@@ -49,7 +48,8 @@ const IndexPage = ({ location }) => {
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="homepage.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={headerBackground}>
+          backgroundImageUrl={headerBackground}
+          location="/">
           <Section style={{overflow: "hidden"}}>
             <Container maxWidth="lg">
               <Grid item xs={12}>

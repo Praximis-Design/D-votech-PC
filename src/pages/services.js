@@ -54,7 +54,8 @@ const ServicesPage = ({ location }) => {
     <StaticIntlProvider locale={locale} >
       <DefaultLayout title={<FormattedMessage id="services.title" values={{ br: <br></br> }} />}
         handleChange={handleChange}
-        backgroundImageUrl={headerBackground}>
+        backgroundImageUrl={headerBackground}
+        location="/services/">
           <Section style={{overflow: "hidden"}}>
             <Container maxWidth="lg">
               <Section>

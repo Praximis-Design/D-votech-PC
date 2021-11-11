@@ -4,14 +4,8 @@ import { FormattedMessage } from "react-intl";
 import DefaultLayout from "../components/DefaultLayout";
 import StaticIntlProvider from "../components/StaticIntlProvider";
 import {
-  Container,
-  Grid,
-  Button,
-  useMediaQuery,
-  makeStyles,
-  Fade
+  useMediaQuery
 } from "@material-ui/core";
-import Article from "../components/Article";
 import Section from "../components/Section";
 import HeaderBackgroundDesktop from "../images/contact_Desktop.jpg"
 import HeaderBackgroundPhone from "../images/contact_iPhone.jpg"
@@ -52,7 +46,8 @@ const ContactPage = ({ location }) => {
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="contact.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={headerBackground}>
+          backgroundImageUrl={headerBackground}
+          location="/contact/">
           <Section>
               <Section>
                 <div className="contactMoreInfo">
