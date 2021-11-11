@@ -46,8 +46,7 @@ const ContactPage = ({ location }) => {
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="contact.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={headerBackground}
-          location="/contact/">
+          backgroundImageUrl={headerBackground}>
           <Section>
               <Section>
                 <div className="contactMoreInfo">

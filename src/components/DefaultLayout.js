@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import {Helmet} from "react-helmet";
 import LogoDevotech from "../images/logo_blanc.png"
 
-const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange, location }) => {
+const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) => {
 
   return (
     <>
@@ -12,11 +12,11 @@ const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange, loca
         <title>Devotech PC</title>
         <meta property="og:title" content="Devotech PC" />
         <meta property="og:image" itemProp="image" content={LogoDevotech} />
-        <meta property="og:description" content="Test de description"/>
+        <meta property="og:description" content="Devotech PC is the perfect place for your computer needs."/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://www.devotechpc.com/"/>
         <meta property="twitter:title" content="Devotech PC"/>
-        <meta property="twitter:description" content="Test de description"/>
+        <meta property="twitter:description" content="Devotech PC is the perfect place for your computer needs."/>
         <meta property="twitter:image" itemProp="image"  content={LogoDevotech}/>
         <meta property="twitter:card" content="summary_large_image"/>
       </Helmet>

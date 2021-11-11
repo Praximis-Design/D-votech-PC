@@ -48,8 +48,7 @@ const IndexPage = ({ location }) => {
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="homepage.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={headerBackground}
-          location="/">
+          backgroundImageUrl={headerBackground}>
           <Section style={{overflow: "hidden"}}>
             <Container maxWidth="lg">
               <Grid item xs={12}>

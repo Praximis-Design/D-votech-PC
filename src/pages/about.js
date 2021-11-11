@@ -50,8 +50,7 @@ const AboutPage = ({ location }) => {
       <StaticIntlProvider locale={locale} >
         <DefaultLayout title={<FormattedMessage id="about.title" values={{ br: <br></br> }} />}
           handleChange={handleChange}
-          backgroundImageUrl={headerBackground}
-          location="/about/">
+          backgroundImageUrl={headerBackground}>
           <Section style={{overflow: "hidden"}}>
             <Container maxWidth="lg">
 
