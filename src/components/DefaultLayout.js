@@ -11,7 +11,7 @@ const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange, loca
       <Helmet>
         <title>Devotech PC</title>
         <meta property="og:title" content="Devotech PC" />
-        {/*<meta property="og:image" itemProp="image" content={LogoDevotech} />*/}
+        <meta property="og:image" itemProp="image" content={LogoDevotech} />
         <meta property="og:description" content="Test de description"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://www.devotechpc.com/"/>
