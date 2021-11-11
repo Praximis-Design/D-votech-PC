@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {Helmet} from "react-helmet";
-import LogoDevotech from "../images/logo_blanc.png"
+import HeaderBackgroundDesktop from "../images/accueil_Desktop.jpg";
 
 const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) => {
 
@@ -11,13 +11,13 @@ const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) =>
       <Helmet>
         <title>Devotech PC</title>
         <meta property="og:title" content="Devotech PC" />
-        <meta property="og:image" itemProp="image" content={LogoDevotech} />
+        <meta property="og:image" itemProp="image" content={HeaderBackgroundDesktop} />
         <meta property="og:description" content="Devotech PC is the perfect place for your computer needs."/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://www.devotechpc.com/"/>
         <meta property="twitter:title" content="Devotech PC"/>
         <meta property="twitter:description" content="Devotech PC is the perfect place for your computer needs."/>
-        <meta property="twitter:image" itemProp="image"  content={LogoDevotech}/>
+        <meta property="twitter:image" itemProp="image"  content={HeaderBackgroundDesktop}/>
         <meta property="twitter:card" content="summary_large_image"/>
       </Helmet>
       <Header title={title} backgroundImageUrl={backgroundImageUrl} handleChange={handleChange} />
