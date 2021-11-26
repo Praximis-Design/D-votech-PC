@@ -27,7 +27,7 @@ const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) =>
         <meta property="twitter:url" content="https://www.devotechpc.com/" />
         <meta property="twitter:title" content="Devotech PC" />
         <meta property="twitter:description" content="Devotech PC is the perfect place for your computer needs." />
-        <meta property="twitter:image" content={TwitterHeaderBackground} />
+        <meta property="twitter:image" content={Favicon} />
 
         <link rel="shortcut icon" href={Favicon} />
       </Helmet>
