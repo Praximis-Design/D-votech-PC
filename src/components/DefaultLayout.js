@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {Helmet} from "react-helmet";
 import HeaderBackground from "../images/Header.png";
-import TwitterHeaderBackground from "../images/TwitterHeader.png";
+import TwitterHeaderBackground from "../images/TwitterHeader.jpg";
 import Favicon from "../images/favicon/favicon.ico";
 
 const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) => {
