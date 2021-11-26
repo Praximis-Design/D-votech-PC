@@ -9,9 +9,8 @@ const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) =>
 
   return (
     <>
-      <Helmet>
+      <Helmet title="Devotech PC" backgroundImageUrl={HeaderBackground} defer={false}>
         {/*<!-- Primary Meta Tags -->*/}
-        <title>Devotech PC</title>
         <meta name="title" content="Devotech PC" />
         <meta name="description" content="Devotech PC is the perfect place for your computer needs." />
 

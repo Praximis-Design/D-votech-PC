@@ -3,5 +3,7 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Devotech PC",
   },
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-react-helmet'
+  ]
 };
