@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {Helmet} from "react-helmet";
 import HeaderBackground from "../images/Header.png";
+import TwitterHeaderBackground from "../images/TwitterHeader.png";
 import Favicon from "../images/favicon/favicon.ico";
 
 const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) => {
@@ -26,7 +27,7 @@ const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) =>
         <meta property="twitter:url" content="https://www.devotechpc.com/" />
         <meta property="twitter:title" content="Devotech PC" />
         <meta property="twitter:description" content="Devotech PC is the perfect place for your computer needs." />
-        <meta property="twitter:image" content={HeaderBackground} />
+        <meta property="twitter:image" content={TwitterHeaderBackground} />
 
         <link rel="shortcut icon" href={Favicon} />
       </Helmet>
