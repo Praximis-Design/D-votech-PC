@@ -10,7 +10,7 @@ const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) =>
 
   return (
     <>
-      <Helmet title="Devotech PC" backgroundImageUrl={HeaderBackground} defer={false}>
+      <Helmet title="Devotech PC" defer={false}>
         {/*<!-- Primary Meta Tags -->*/}
         <meta name="title" content="Devotech PC" />
         <meta name="description" content="Devotech PC is the perfect place for your computer needs." />
@@ -20,10 +20,10 @@ const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) =>
         <meta property="og:url" content="https://www.devotechpc.com/" />
         <meta property="og:title" content="Devotech PC" />
         <meta property="og:description" content="Devotech PC is the perfect place for your computer needs." />
-        <meta property="og:image" content={TwitterHeaderBackground} />
+        <meta property="og:image" content={HeaderBackground} />
 
         {/*<!-- Twitter -->*/}
-        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:card" content="summary" />
         <meta property="twitter:url" content="https://www.devotechpc.com/" />
         <meta property="twitter:title" content="Devotech PC" />
         <meta property="twitter:description" content="Devotech PC is the perfect place for your computer needs." />
