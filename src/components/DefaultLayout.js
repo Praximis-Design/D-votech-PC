@@ -20,14 +20,14 @@ const DefaultLayout = ({ title, backgroundImageUrl, children, handleChange }) =>
         <meta property="og:url" content="https://www.devotechpc.com/" />
         <meta property="og:title" content="Devotech PC" />
         <meta property="og:description" content="Devotech PC is the perfect place for your computer needs." />
-        <meta property="og:image" content={HeaderBackground} />
+        <meta property="og:image" content={TwitterHeaderBackground} />
 
         {/*<!-- Twitter -->*/}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.devotechpc.com/" />
         <meta property="twitter:title" content="Devotech PC" />
         <meta property="twitter:description" content="Devotech PC is the perfect place for your computer needs." />
-        <meta property="twitter:image" content={Favicon} />
+        <meta property="twitter:image" content={TwitterHeaderBackground} />
 
         <link rel="shortcut icon" href={Favicon} />
       </Helmet>
